@@ -13,6 +13,10 @@ if ($Port -le 0) {
     }
 }
 
+if ($Port -eq 3306) {
+    throw 'Port 3306 is reserved for the existing MySQL service. Refusing to stop it; use 3307 (default) or another non-3306 port.'
+}
+
 $mysqlHome = $env:MYSQL_HOME
 
 if (-not $mysqlHome) {
@@ -58,6 +62,10 @@ while ((Get-Date) -lt $deadline) {
     }
 
     Start-Sleep -Milliseconds 500
+}
+
+if (Test-MySqlReady) {
+    throw "MySQL is still reachable on 127.0.0.1:$Port after shutdown. Check the process and stop it manually."
 }
 
 Write-Host 'MySQL stopped.'

@@ -13,6 +13,10 @@ if ($Port -le 0) {
     }
 }
 
+if ($Port -eq 3306) {
+    throw 'Port 3306 is reserved for the existing MySQL service. Refusing to start or modify it; use 3307 (default) or another non-3306 port.'
+}
+
 $RepoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $MyIni = Join-Path $PSScriptRoot 'my.ini'
 $DataDir = Join-Path $RepoRoot '.mysql-data'
@@ -21,8 +25,9 @@ $LogFile = Join-Path $DataDir 'mysqld.log'
 
 # MySQL 8.0.36 on Windows is unreliable when the undo tablespace path contains
 # spaces. The repository path does contain spaces, so keep only the undo
-# tablespaces in a sibling directory whose path has no spaces. The main data
-# directory remains .mysql-data inside the repository.
+# tablespaces in a directory whose path has no spaces (default:
+# <repo drive root>\hexora-mysql-undo, override with HEXORA_MYSQL_UNDO_DIR).
+# The main data directory remains .mysql-data inside the repository.
 $UndoDir = $env:HEXORA_MYSQL_UNDO_DIR
 
 if (-not $UndoDir) {
@@ -114,6 +119,15 @@ if (-not (Test-MySqlReady)) {
         }
         else {
             New-Item -ItemType Directory -Path $DataDir | Out-Null
+        }
+
+        if (Test-Path $UndoDir) {
+            $staleUndo = Get-ChildItem -Force -Path $UndoDir
+
+            if ($staleUndo) {
+                Write-Host "Clearing stale undo tablespaces from $UndoDir ..."
+                $staleUndo | Remove-Item -Recurse -Force
+            }
         }
 
         Write-Host "Initializing project-local MySQL data directory at $DataDir ..."

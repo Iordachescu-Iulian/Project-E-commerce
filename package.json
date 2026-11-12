@@ -4,7 +4,7 @@
   "private": true,
   "description": "Hexora - online video game store for PC and console",
   "engines": {
-    "node": ">=18.17.0 <19"
+    "node": ">=18.17.0"
   },
   "scripts": {
     "dev": "next dev",

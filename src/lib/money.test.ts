@@ -15,4 +15,11 @@ describe('formatPrice', () => {
     expect(formatPrice('5.5')).toBe('€5.50');
     expect(formatPrice({ toString: () => '12.30' })).toBe('€12.30');
   });
+
+  it('returns a visible placeholder for non-finite or malformed values', () => {
+    expect(formatPrice(Number.NaN)).toBe('—');
+    expect(formatPrice(Number.POSITIVE_INFINITY)).toBe('—');
+    expect(formatPrice('not-a-price')).toBe('—');
+    expect(formatPrice('')).toBe('—');
+  });
 });

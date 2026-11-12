@@ -26,6 +26,14 @@ products and orders.
 | Database  | MySQL                                       |
 | Payments  | Stripe (test mode)                          |
 
+## AI use
+
+AI coding tools were used for **code generation, code review, test scaffolding,
+and documentation drafts**. The primary tool was **OpenCode** running the
+**DeepSeek V4.1 Flash** model. All AI-generated changes were reviewed, tested,
+and accepted by the team; the team remains responsible for the final code and
+documentation.
+
 ## Getting started
 
 1. Copy the environment template and set a local `AUTH_SECRET`:
@@ -39,12 +47,14 @@ Open <http://localhost:3000>.
 `npm run setup` starts the project-local MySQL instance on `127.0.0.1:3307`,
 applies the Prisma schema and seeds the shop. The instance stores its data in
 `.mysql-data` (gitignored). `npm run db:stop` stops it; the existing MySQL
-service on port 3306 is never touched.
+service on port 3306 is never touched. Both scripts hard-refuse `DB_PORT=3306`.
 
 MySQL 8.0.36 on Windows cannot reliably place undo tablespaces under a path
-containing spaces. The scripts therefore keep only the undo tablespaces in a
-no-space sibling directory (`D:\hexora-mysql-undo` by default, or
-`HEXORA_MYSQL_UNDO_DIR`). The main data directory stays in `.mysql-data`.
+containing spaces. The scripts therefore keep only the undo tablespaces outside
+the repository. The default is `D:\hexora-mysql-undo` (the root of the drive
+that contains the repo). Set the `HEXORA_MYSQL_UNDO_DIR` environment variable to
+override it; the chosen path must not contain spaces. The main data directory
+stays in `.mysql-data`.
 
 ## Scripts
 
