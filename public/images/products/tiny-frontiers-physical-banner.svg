@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="tiny-frontiers-physical-banner-title tiny-frontiers-physical-banner-desc" shape-rendering="geometricPrecision" font-family="Arial, Helvetica, sans-serif">
+  <title id="tiny-frontiers-physical-banner-title">Tiny Frontiers — Physical Edition</title>
+  <desc id="tiny-frontiers-physical-banner-desc">Banner art for Tiny Frontiers, Physical Edition, on PC.</desc>
+  <defs>
+    <linearGradient id="tiny-frontiers-physical-banner-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1E19"/>
+      <stop offset="52%" stop-color="#113634"/>
+      <stop offset="100%" stop-color="#1D626D"/>
+    </linearGradient>
+    <radialGradient id="tiny-frontiers-physical-banner-glow" cx="0.78" cy="0.2" r="0.72">
+      <stop offset="0%" stop-color="#E2BE5A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#E2BE5A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="tiny-frontiers-physical-banner-mesh" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M28 1 L54 15 L54 33 L28 47 L2 33 L2 15 Z" fill="none" stroke="#F4F2EC" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="tiny-frontiers-physical-banner-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#tiny-frontiers-physical-banner-bg)"/>
+  <rect width="1200" height="600" fill="url(#tiny-frontiers-physical-banner-glow)"/>
+  <rect width="1200" height="600" fill="url(#tiny-frontiers-physical-banner-mesh)"/>
+  <rect width="8" height="600" fill="#E2BE5A"/>
+  <line x1="770" y1="0" x2="650" y2="600" stroke="#F4F2EC" stroke-opacity="0.07" stroke-width="1"/>
+  <polygon points="1011.6,136.8 1123.6,285.3 1051.0,456.5 866.4,479.2 754.4,330.7 827.0,159.5" fill="#1D626D" fill-opacity="0.24" stroke="#E2BE5A" stroke-opacity="0.55" stroke-width="2"/>
+    <polygon points="946.5,181.7 1052.1,251.4 1044.6,377.6 931.5,434.3 825.9,364.6 833.4,238.4" fill="#0B1E19" fill-opacity="0.62" stroke="#F4F2EC" stroke-opacity="0.14" stroke-width="1.5"/>
+    <polygon points="966.1,246.8 1005.6,300.9 978.5,362.1 911.9,369.2 872.4,315.1 899.5,253.9" fill="#E2BE5A" fill-opacity="0.16" stroke="#E2BE5A" stroke-opacity="0.7" stroke-width="2"/>
+  <polygon points="1198.9,113.5 1210.4,135.4 1197.3,156.3 1172.5,155.4 1161.0,133.5 1174.2,112.5" fill="none" stroke="#E2BE5A" stroke-opacity="0.31" stroke-width="1.5"/>
+    <polygon points="696.0,156.7 721.8,185.0 710.1,221.4 672.8,229.5 647.1,201.2 658.7,164.8" fill="none" stroke="#E2BE5A" stroke-opacity="0.22" stroke-width="1.5"/>
+    <polygon points="681.1,382.7 702.1,396.4 700.7,421.5 678.4,432.8 657.3,419.1 658.7,394.1" fill="none" stroke="#E2BE5A" stroke-opacity="0.39" stroke-width="1.5"/>
+    <polygon points="754.7,66.6 765.1,89.2 750.7,109.6 725.9,107.3 715.5,84.7 729.9,64.3" fill="none" stroke="#E2BE5A" stroke-opacity="0.33" stroke-width="1.5"/>
+    <polygon points="664.0,133.2 677.2,153.2 666.5,174.7 642.5,176.2 629.3,156.1 640.0,134.6" fill="none" stroke="#E2BE5A" stroke-opacity="0.26" stroke-width="1.5"/>
+  <text x="72" y="62" font-size="18" font-weight="900" letter-spacing="6" fill="#F4F2EC">HEXORA</text>
+  <text x="72" y="100" font-size="13" font-weight="700" letter-spacing="3" fill="#B8B4CC">INDIE &amp; STRATEGY</text>
+  <rect x="72" y="124" width="62" height="3" rx="1.5" fill="#E2BE5A"/>
+  <rect x="1000" y="38" width="128" height="34" rx="17" fill="#14121F" fill-opacity="0.55" stroke="#E2BE5A" stroke-opacity="0.65"/>
+    <text x="1064" y="60" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="2.4" fill="#E2BE5A">PHYSICAL</text>
+  <text filter="url(#tiny-frontiers-physical-banner-shadow)" font-size="88" font-weight="900" text-anchor="middle" letter-spacing="-1" fill="#F4F2EC"><tspan x="386" y="239.4">Tiny</tspan><tspan x="386" y="332.6">Frontiers</tspan></text>
+  <rect x="72" y="436" width="628" height="1" fill="#F4F2EC" fill-opacity="0.14"/>
+  <rect x="72" y="466" width="120" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.07" stroke="#F4F2EC" stroke-opacity="0.22"/>
+    <text x="94" y="491" font-size="14" font-weight="700" letter-spacing="0.6" fill="#F4F2EC">PC</text>
+  <text x="72" y="554" font-size="16" font-weight="800" letter-spacing="3.6" fill="#E2BE5A">PHYSICAL EDITION</text>
+  <text x="700" y="554" text-anchor="end" font-size="11" font-weight="700" letter-spacing="2.4" fill="#B8B4CC">BOXED COPY</text>
+</svg>

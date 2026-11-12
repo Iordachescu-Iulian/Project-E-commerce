@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-labelledby="hollow-tide-digital-cover-title hollow-tide-digital-cover-desc" shape-rendering="geometricPrecision" font-family="Arial, Helvetica, sans-serif">
+  <title id="hollow-tide-digital-cover-title">Hollow Tide — Digital Edition</title>
+  <desc id="hollow-tide-digital-cover-desc">Cover art for Hollow Tide, Digital Edition, on Xbox Series X.</desc>
+  <defs>
+    <linearGradient id="hollow-tide-digital-cover-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E110B"/>
+      <stop offset="52%" stop-color="#361E11"/>
+      <stop offset="100%" stop-color="#593718"/>
+    </linearGradient>
+    <radialGradient id="hollow-tide-digital-cover-glow" cx="0.78" cy="0.2" r="0.72">
+      <stop offset="0%" stop-color="#DDB640" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#DDB640" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="hollow-tide-digital-cover-mesh" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M28 1 L54 15 L54 33 L28 47 L2 33 L2 15 Z" fill="none" stroke="#F4F2EC" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="hollow-tide-digital-cover-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="600" height="800" fill="url(#hollow-tide-digital-cover-bg)"/>
+  <rect width="600" height="800" fill="url(#hollow-tide-digital-cover-glow)"/>
+  <rect width="600" height="800" fill="url(#hollow-tide-digital-cover-mesh)"/>
+  <rect width="8" height="800" fill="#5FE0A4"/>
+  <polygon points="521.5,489.1 615.1,580.6 582.7,707.6 456.5,742.9 362.9,651.4 395.3,524.4" fill="#593718" fill-opacity="0.24" stroke="#DDB640" stroke-opacity="0.55" stroke-width="2"/>
+    <polygon points="530.0,536.9 578.0,612.0 537.0,691.1 448.0,695.1 400.0,620.0 441.0,540.9" fill="#1E110B" fill-opacity="0.62" stroke="#F4F2EC" stroke-opacity="0.14" stroke-width="1.5"/>
+    <polygon points="489.9,568.8 530.3,593.2 529.4,640.4 488.1,663.2 447.7,638.8 448.6,591.6" fill="#DDB640" fill-opacity="0.16" stroke="#DDB640" stroke-opacity="0.7" stroke-width="2"/>
+  <polygon points="699.0,669.0 709.6,686.1 700.0,703.8 679.9,704.4 669.3,687.3 678.9,669.6" fill="none" stroke="#DDB640" stroke-opacity="0.43" stroke-width="1.5"/>
+    <polygon points="438.3,395.0 454.3,411.3 448.2,433.3 426.2,439.0 410.2,422.7 416.2,400.8" fill="none" stroke="#DDB640" stroke-opacity="0.25" stroke-width="1.5"/>
+    <polygon points="674.4,458.3 687.5,470.8 683.2,488.4 665.8,493.6 652.7,481.0 657.0,463.4" fill="none" stroke="#DDB640" stroke-opacity="0.49" stroke-width="1.5"/>
+    <polygon points="676.0,637.3 681.9,650.0 673.9,661.4 659.9,660.2 654.1,647.5 662.1,636.1" fill="none" stroke="#DDB640" stroke-opacity="0.42" stroke-width="1.5"/>
+    <polygon points="415.8,762.0 435.2,774.2 434.4,797.1 414.1,807.8 394.7,795.7 395.6,772.8" fill="none" stroke="#DDB640" stroke-opacity="0.24" stroke-width="1.5"/>
+  <text x="56" y="64" font-size="18" font-weight="900" letter-spacing="6" fill="#F4F2EC">HEXORA</text>
+  <text x="56" y="100" font-size="13" font-weight="700" letter-spacing="3" fill="#B8B4CC">ACTION &amp; ADVENTURE</text>
+  <rect x="56" y="122" width="62" height="3" rx="1.5" fill="#5FE0A4"/>
+  <rect x="416" y="38" width="128" height="34" rx="17" fill="#14121F" fill-opacity="0.55" stroke="#5FE0A4" stroke-opacity="0.65"/>
+    <text x="480" y="60" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="2.4" fill="#5FE0A4">DIGITAL</text>
+  <text filter="url(#hollow-tide-digital-cover-shadow)" font-size="72" font-weight="900" text-anchor="middle" letter-spacing="-1" fill="#F4F2EC"><tspan x="300" y="382.0">Hollow Tide</tspan></text>
+  <rect x="56" y="662" width="488" height="1" fill="#F4F2EC" fill-opacity="0.14"/>
+  <rect x="56" y="690" width="156" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.07" stroke="#F4F2EC" stroke-opacity="0.22"/>
+    <text x="78" y="715" font-size="14" font-weight="700" letter-spacing="0.6" fill="#F4F2EC">Xbox Series X</text>
+  <text x="56" y="768" font-size="16" font-weight="800" letter-spacing="3.6" fill="#5FE0A4">DIGITAL EDITION</text>
+  <text x="544" y="768" text-anchor="end" font-size="11" font-weight="700" letter-spacing="2.4" fill="#B8B4CC">INSTANT DELIVERY</text>
+</svg>
