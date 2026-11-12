@@ -13,6 +13,10 @@ if ($Port -le 0) {
     }
 }
 
+if ($Port -lt 1 -or $Port -gt 65535) {
+    throw "Invalid MySQL port $Port. Use a port between 1 and 65535."
+}
+
 if ($Port -eq 3306) {
     throw 'Port 3306 is reserved for the existing MySQL service. Refusing to start or modify it; use 3307 (default) or another non-3306 port.'
 }
@@ -60,6 +64,27 @@ if (-not $UndoDir -or $UndoDir -match '\s') {
 }
 
 New-Item -ItemType Directory -Force -Path $UndoDir | Out-Null
+
+# The default undo directory is shared by every checkout on the drive. Mark it
+# with the owning data directory so one checkout cannot clear another's undo
+# tablespaces.
+$UndoOwnerFile = Join-Path $UndoDir '.hexora-undo-owner'
+$ExpectedDataDir = [System.IO.Path]::GetFullPath($DataDir)
+
+if (Test-Path $UndoOwnerFile) {
+    $undoOwner = [string](Get-Content -Raw -Path $UndoOwnerFile)
+    $undoOwner = $undoOwner.Trim()
+
+    if (-not $undoOwner) {
+        Set-Content -Path $UndoOwnerFile -Value $ExpectedDataDir -Encoding ascii
+    }
+    elseif ($undoOwner -ne $ExpectedDataDir) {
+        throw "The undo directory $UndoDir is owned by another Hexora checkout ($undoOwner). Set HEXORA_MYSQL_UNDO_DIR to a unique path without spaces for this checkout."
+    }
+}
+else {
+    Set-Content -Path $UndoOwnerFile -Value $ExpectedDataDir -Encoding ascii
+}
 
 $Database = 'hexora'
 $DbUser = 'hexora'
@@ -122,7 +147,7 @@ if (-not (Test-MySqlReady)) {
         }
 
         if (Test-Path $UndoDir) {
-            $staleUndo = Get-ChildItem -Force -Path $UndoDir
+            $staleUndo = Get-ChildItem -Force -Path $UndoDir -Filter 'undo_*'
 
             if ($staleUndo) {
                 Write-Host "Clearing stale undo tablespaces from $UndoDir ..."

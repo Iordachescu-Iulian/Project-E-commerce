@@ -53,8 +53,10 @@ MySQL 8.0.36 on Windows cannot reliably place undo tablespaces under a path
 containing spaces. The scripts therefore keep only the undo tablespaces outside
 the repository. The default is `D:\hexora-mysql-undo` (the root of the drive
 that contains the repo). Set the `HEXORA_MYSQL_UNDO_DIR` environment variable to
-override it; the chosen path must not contain spaces. The main data directory
-stays in `.mysql-data`.
+override it; the chosen path must not contain spaces. The undo directory is
+marked with the checkout that owns it, and another checkout using the same
+directory is refused; set a unique `HEXORA_MYSQL_UNDO_DIR` per checkout when
+needed. The main data directory stays in `.mysql-data`.
 
 ## Scripts
 

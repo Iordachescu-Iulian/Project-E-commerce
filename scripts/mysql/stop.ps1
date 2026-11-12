@@ -13,6 +13,10 @@ if ($Port -le 0) {
     }
 }
 
+if ($Port -lt 1 -or $Port -gt 65535) {
+    throw "Invalid MySQL port $Port. Use a port between 1 and 65535."
+}
+
 if ($Port -eq 3306) {
     throw 'Port 3306 is reserved for the existing MySQL service. Refusing to stop it; use 3307 (default) or another non-3306 port.'
 }
