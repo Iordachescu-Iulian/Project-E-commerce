@@ -1,0 +1,51 @@
+{
+  "name": "hexora",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hexora - online video game store for PC and console",
+  "engines": {
+    "node": ">=18.17.0 <19"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "setup": "prisma generate && npm run db:start && prisma db push && prisma db seed",
+    "db:start": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/mysql/start.ps1",
+    "db:stop": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/mysql/stop.ps1",
+    "db:push": "prisma db push",
+    "db:seed": "prisma db seed",
+    "db:verify": "tsx scripts/verify-seed.ts",
+    "db:studio": "prisma studio",
+    "postinstall": "prisma generate"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "5.22.0",
+    "bcryptjs": "2.4.3",
+    "dotenv": "16.4.7",
+    "jose": "5.9.6",
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "stripe": "17.7.0",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "2.4.6",
+    "@types/node": "18.19.130",
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
+    "autoprefixer": "10.4.27",
+    "postcss": "8.4.49",
+    "prisma": "5.22.0",
+    "tailwindcss": "3.4.19",
+    "tsx": "4.19.2",
+    "typescript": "5.6.3",
+    "vitest": "2.1.9"
+  }
+}
