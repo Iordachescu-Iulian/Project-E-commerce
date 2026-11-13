@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hexora — P2</title>
+<style>
+  @page { size: 13.333in 7.5in; margin: 0; }
+  :root {
+    --bg:#14121F; --surface:#1E1B2E; --surface2:#2A2834; --ink:#F4F2EC;
+    --muted:#B8B4CC; --line:#3A3650; --accent:#5FE0A4; --secondary:#5B45E0;
+  }
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; background:#0b0911; }
+  body { font-family:Arial, Helvetica, sans-serif; color:var(--ink); -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .slide { position:relative; width:1280px; height:720px; padding:52px 64px 60px; background:var(--bg); overflow:hidden; page-break-after:always; break-after:page; display:flex; flex-direction:column; }
+  .slide:last-child { page-break-after:auto; break-after:auto; }
+  .kicker { font-size:11px; letter-spacing:.26em; color:var(--accent); font-weight:700; text-transform:uppercase; }
+  h1 { margin:12px 0 0; font-size:58px; line-height:1.02; letter-spacing:-.02em; font-weight:900; }
+  h2 { margin:10px 0 0; font-size:38px; line-height:1.08; letter-spacing:-.015em; font-weight:900; }
+  .lead { margin:10px 0 0; font-size:15px; line-height:1.5; color:var(--muted); max-width:900px; }
+  .footer { position:absolute; left:64px; right:64px; bottom:22px; display:flex; justify-content:space-between; font-size:10px; letter-spacing:.14em; color:#6f6a85; text-transform:uppercase; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:26px; }
+  .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:26px; }
+  .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:24px; }
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:18px 20px; }
+  .card .code { display:inline-block; font-size:10px; font-weight:800; letter-spacing:.12em; color:var(--accent); border:1px solid rgba(95,224,164,.45); border-radius:999px; padding:3px 9px; }
+  .card h3 { margin:10px 0 6px; font-size:16px; }
+  .card p { margin:0; font-size:11.5px; line-height:1.5; color:var(--muted); }
+  .status { display:flex; gap:6px; margin-top:9px; font-size:9px; letter-spacing:.1em; text-transform:uppercase; }
+  .ok { color:var(--accent); } .next { color:#ffc457; } .later { color:#a99bff; }
+  .stat { border-left:3px solid var(--accent); padding-left:14px; }
+  .stat b { display:block; font-size:34px; color:var(--accent); line-height:1; }
+  .stat span { font-size:10.5px; color:var(--muted); }
+  table { width:100%; border-collapse:collapse; margin-top:18px; font-size:10.5px; }
+  th { text-align:left; font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); padding:8px 10px; border-bottom:1px solid var(--line); background:var(--surface2); }
+  td { padding:7px 10px; border-bottom:1px solid rgba(58,54,80,.6); vertical-align:top; }
+  td code { color:var(--accent); font-family:Consolas, monospace; font-size:10px; }
+  .mono { font-family:Consolas, monospace; }
+  .imgbox { background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:10px; display:flex; align-items:center; justify-content:center; }
+  .imgbox img { max-width:100%; max-height:100%; display:block; }
+  .shot { border:1px solid var(--line); border-radius:8px; overflow:hidden; background:var(--surface); }
+  .shot img { width:100%; display:block; }
+  .shot span { display:block; padding:7px 10px; font-size:9.5px; color:var(--muted); letter-spacing:.06em; text-transform:uppercase; }
+  ul { margin:10px 0 0; padding-left:18px; }
+  li { font-size:12px; line-height:1.55; color:var(--muted); margin-bottom:6px; }
+  li b { color:var(--ink); }
+  .pill { display:inline-block; padding:4px 9px; border-radius:999px; background:rgba(91,69,224,.18); color:#c0b6ff; font-size:9px; letter-spacing:.1em; text-transform:uppercase; }
+  .cover { display:flex; flex-direction:column; justify-content:center; background:radial-gradient(900px 500px at 78% 20%, rgba(91,69,224,.28), transparent 60%), var(--bg); }
+  .cover .brand { font-size:16px; letter-spacing:.5em; font-weight:900; color:var(--ink); }
+  .cover h1 { font-size:92px; letter-spacing:.06em; margin-top:22px; }
+  .cover .sub { margin-top:8px; font-size:22px; color:var(--accent); letter-spacing:.04em; }
+  .cover .meta { margin-top:34px; display:flex; gap:34px; font-size:11px; color:var(--muted); }
+  .cover .meta b { display:block; color:var(--ink); font-size:13px; margin-bottom:4px; letter-spacing:.02em; }
+  .flow { display:flex; align-items:stretch; gap:10px; margin-top:22px; }
+  .flow div { flex:1; border:1px solid var(--line); border-radius:8px; background:var(--surface); padding:12px; font-size:10.5px; color:var(--muted); }
+  .flow b { display:block; color:var(--ink); font-size:11px; margin-bottom:5px; }
+  .trace { margin:20px 0 0; border-top:1px solid var(--line); padding-top:12px; display:flex; flex-wrap:wrap; gap:10px 26px; font-size:10px; color:var(--muted); }
+  .trace b { color:var(--accent); font-weight:700; margin-right:4px; }
+</style>
+</head>
+<body>
+
+<!-- 1 -->
+<section class="slide cover">
+  <div class="brand">HEXORA</div>
+  <h1>SPECIFICATION<br>&amp; PROTOTYPE</h1>
+  <div class="sub">Video games, digital and physical — P2 · Week 7</div>
+  <div class="meta">
+    <div><b>Motroc Cosmin Alexandru</b>Catalog &amp; admin lead</div>
+    <div><b>Nica Rares-Octavian</b>Payments &amp; security lead</div>
+    <div><b>Iordachescu Iulian Daniel</b>Accounts &amp; shopping lead</div>
+    <div><b>E-Commerce · 2026–2027</b>P2 · Hexora</div>
+  </div>
+  <div class="footer"><span>Hexora · P2</span><span>1 / 15</span></div>
+</section>
+
+<!-- 2 -->
+<section class="slide">
+  <div class="kicker">Status since P1</div>
+  <h2>From a plan to a running store</h2>
+  <p class="lead">The data model, component architecture and API surface are frozen. The three riskiest areas — catalog, accounts and payments — run against a seeded MySQL database.</p>
+  <div class="grid4">
+    <div class="card stat"><b>13</b><span>tables in the frozen Prisma schema</span></div>
+    <div class="card stat"><b>32</b><span>purchasable editions from 16 games and 4 categories</span></div>
+    <div class="card stat"><b>9</b><span>test files, one command: <span class="mono">npm test</span></span></div>
+    <div class="card stat"><b>3</b><span>branches, each with its own author and review</span></div>
+  </div>
+  <div class="grid3">
+    <div class="card"><h3>Frozen at P2</h3><p>ERD, endpoint list, wireframes, auth contract, payment service contract. Later changes need a written request.</p></div>
+    <div class="card"><h3>Working today</h3><p>A1 catalog, A2 search, A4 accounts, A10 groundwork, A6 webhook, admin/local MySQL setup, seed data.</p></div>
+    <div class="card"><h3>Next: weeks 8–12</h3><p>A3 cart, A5 checkout, A7 stock UI, A8 history, A9 admin, A11 responsive, A12 full test suite, B4 + B5.</p></div>
+  </div>
+  <div class="footer"><span>Status · P2</span><span>2 / 15</span></div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="kicker">Requirements A1–A4</div>
+  <h2>Catalog, search, accounts</h2>
+  <div class="grid4">
+    <div class="card"><span class="code">A1</span><h3>Product catalog</h3><p>Server-rendered paginated catalog (24/page), category pages and a product page with gallery, price, stock, platform, format and sibling edition.</p><div class="status ok">● Implemented</div></div>
+    <div class="card"><span class="code">A2</span><h3>Basic search</h3><p>Case-insensitive search on product names with filters preserved in the URL and an explicit “No games found” state.</p><div class="status ok">● Implemented</div></div>
+    <div class="card"><span class="code">A3</span><h3>Shopping cart</h3><p>One cart per authenticated user; add, update and remove with server-recalculated totals and stock caps. Persists after logout.</p><div class="status next">● Weeks 8–9</div></div>
+    <div class="card"><span class="code">A4</span><h3>User accounts</h3><p>Register, login, logout, bcrypt hashes and a signed httpOnly JWT. Address CRUD with exactly one default address.</p><div class="status ok">● Implemented</div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>What the demo proves</h3><p>4 categories · 16 games · 32 editions · 64 generated images, all read from MySQL at 127.0.0.1:3307. A missing cover falls back gracefully and a zero-stock edition is visibly out of stock.</p></div>
+    <div class="card"><h3>Server-side by design</h3><p>Prisma is imported only in <span class="mono">src/server/*</span> and route handlers. Passwords never leave the server as hashes; the session cookie is httpOnly, SameSite=Lax and signed with HS256.</p></div>
+  </div>
+  <div class="trace"><span><b>Catalog</b>src/app/(shop)/catalog · categories/[slug] · products/[slug]</span><span><b>Queries</b>src/server/queries/catalog.ts</span><span><b>Seed</b>prisma/seed-products.ts</span><span><b>Accounts</b>src/lib/auth.ts · src/app/account</span></div>
+  <div class="footer"><span>Requirements · A1–A4</span><span>3 / 15</span></div>
+</section>
+
+<!-- 4 -->
+<section class="slide">
+  <div class="kicker">Requirements A5–A8</div>
+  <h2>Checkout, payment, stock and history</h2>
+  <div class="grid4">
+    <div class="card"><span class="code">A5</span><h3>Checkout</h3><p>Address → delivery method (digital 0 lei, courier 19,99 lei) → order summary → card payment. The confirmation page shows the order number.</p><div class="status next">● Weeks 8–9</div></div>
+    <div class="card"><span class="code">A6</span><h3>Sandbox payment</h3><p>Only a signed <span class="mono">payment_intent.succeeded</span> webhook marks an order Paid. A browser redirect never changes status; a failure stays Unpaid.</p><div class="status ok">● Webhook now</div></div>
+    <div class="card"><span class="code">A7</span><h3>Stock management</h3><p>A conditional <span class="mono">stock &gt;= quantity</span> decrement inside the paid transaction; rollback on conflict. Cancellation restores stock exactly once.</p><div class="status ok">● Service now</div></div>
+    <div class="card"><span class="code">A8</span><h3>Order history</h3><p>Customer order list and detail with date, items, total, payment state and status history.</p><div class="status next">● Week 9</div></div>
+  </div>
+  <div class="flow">
+    <div><b>1 · Checkout</b>Server reloads the cart, validates stock, creates Order NEW / UNPAID.</div>
+    <div><b>2 · PaymentIntent</b>Amount computed server-side; Stripe.js confirms the test card.</div>
+    <div><b>3 · Webhook</b>Signature verified, event stored once, order → PAID, stock −qty, history appended.</div>
+    <div><b>4 · Confirmation</b>Page reads the database; the browser redirect is never trusted.</div>
+  </div>
+  <div class="trace"><span><b>Webhook</b>src/app/api/webhooks/stripe/route.ts</span><span><b>Service</b>src/server/services/payments.ts</span><span><b>Docs</b>docs/payments.md · scripts/test-webhook.mjs</span></div>
+  <div class="footer"><span>Requirements · A5–A8</span><span>4 / 15</span></div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="kicker">Requirements A9–A12</div>
+  <h2>Admin, security, responsive, tests</h2>
+  <div class="grid4">
+    <div class="card"><span class="code">A9</span><h3>Administration panel</h3><p>Separate ADMIN role, product/category CRUD with image upload, order list filtered by status and audited transitions New → Paid → Shipped → Delivered.</p><div class="status next">● Weeks 10–11</div></div>
+    <div class="card"><span class="code">A10</span><h3>Basic security</h3><p>Zod validation, same-origin check on mutating routes, security headers, server-side role guards and Prisma parameterisation.</p><div class="status ok">● Groundwork now</div></div>
+    <div class="card"><span class="code">A11</span><h3>Responsive design</h3><p>All customer pages usable at 360 px: 2-column product grid on mobile, 4-column desktop, no horizontal scroll.</p><div class="status ok">● Implemented</div></div>
+    <div class="card"><span class="code">A12</span><h3>Automated tests</h3><p>Vitest, one command. Payment confirmation, stock, auth, sessions, catalog and money covered; cart and totals join with A3.</p><div class="status ok">● Growing</div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h3>Why the split matters</h3><p>A10 is not a UI concern: every route calls <span class="mono">requireUser</span> / <span class="mono">requireRole</span> and every mutating request passes <span class="mono">assertSameOrigin</span> before touching data.</p></div>
+    <div class="card"><h3>What P3 will grade</h3><p>Only working behaviour. The prototype already exercises the parts that are easy to fake: database reads, password hashing, cookie sessions, webhook signatures and stock transactions.</p></div>
+  </div>
+  <div class="trace"><span><b>Security</b>src/lib/security.ts · next.config.mjs</span><span><b>Tests</b>9 files · vitest · npm test</span><span><b>Responsive</b>docs/screenshots/*-360.png</span></div>
+  <div class="footer"><span>Requirements · A9–A12</span><span>5 / 15</span></div>
+</section>
+
+<!-- 6 -->
+<section class="slide">
+  <div class="kicker">Bonuses</div>
+  <h2>B4 sales dashboard · B5 discount codes</h2>
+  <div class="grid2">
+    <div class="card">
+      <span class="code">B4 · 3 points</span>
+      <h3 style="font-size:24px;margin-top:14px">Daily sales, top products, average order</h3>
+      <p style="font-size:13px">Admin dashboard over a selected interval: a daily sales chart, the top five products by revenue and the average order value. Computed with grouped SQL aggregates, not hard-coded numbers.</p>
+      <ul><li><b>Data:</b> Order.paidAt, Order.total, OrderItem.quantity.</li><li><b>Filter:</b> from/to dates, default last 30 days.</li><li><b>Owner:</b> Cosmin · week 11.</li></ul>
+    </div>
+    <div class="card">
+      <span class="code">B5 · 3 points</span>
+      <h3 style="font-size:24px;margin-top:14px">Percentage or fixed discounts</h3>
+      <p style="font-size:13px">A code has a type, value, optional expiry and maximum number of uses. Validation happens on the server at checkout; the used counter increments once per paid order.</p>
+      <ul><li><b>Model:</b> DiscountCode + Order.discountCodeId.</li><li><b>Admin:</b> list, create, edit, deactivate.</li><li><b>Owner:</b> Iulian · week 11.</li></ul>
+    </div>
+  </div>
+  <p class="lead">Only B4 and B5 are claimed. Bonuses score only after A1–A12 work, so both land in week 11, after checkout and admin.</p>
+  <div class="footer"><span>Bonuses · B4 + B5</span><span>6 / 15</span></div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="kicker">Data model</div>
+  <h2>13 tables, one edition per product</h2>
+  <div class="imgbox" style="height:566px;margin-top:12px"><img src="erd-deck.png" alt="Entity relationship diagram"></div>
+  <div class="footer"><span>ERD · Prisma schema</span><span>7 / 15</span></div>
+</section>
+
+<!-- 8 -->
+<section class="slide">
+  <div class="kicker">Architecture</div>
+  <h2>Next.js full stack, Prisma, MySQL, Stripe</h2>
+  <div class="imgbox" style="height:512px;margin-top:16px"><img src="architecture.png" alt="Component architecture"></div>
+  <div class="footer"><span>Architecture</span><span>8 / 15</span></div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="kicker">API surface</div>
+  <h2>Implemented at P2</h2>
+  <table>
+    <thead><tr><th style="width:70px">Method</th><th style="width:280px">Route</th><th style="width:130px">Access</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td><code>GET</code></td><td><code>/api/products</code></td><td>public</td><td>Paginated catalog, max 24/page; q, category, page, filters</td></tr>
+      <tr><td><code>GET</code></td><td><code>/api/products/[slug]</code></td><td>public</td><td>Product detail with images and sibling editions</td></tr>
+      <tr><td><code>GET</code></td><td><code>/api/categories</code></td><td>public</td><td>Categories with active edition counts</td></tr>
+      <tr><td><code>POST</code></td><td><code>/api/auth/register</code></td><td>public</td><td>Create account, hash password, start session</td></tr>
+      <tr><td><code>POST</code></td><td><code>/api/auth/login</code></td><td>public</td><td>Verify password, set signed session cookie</td></tr>
+      <tr><td><code>POST</code></td><td><code>/api/auth/logout</code></td><td>authenticated</td><td>Clear the session cookie</td></tr>
+      <tr><td><code>GET</code></td><td><code>/api/auth/me</code></td><td>authenticated</td><td>Current user</td></tr>
+      <tr><td><code>GET</code></td><td><code>/api/addresses</code></td><td>customer</td><td>List own addresses, default first</td></tr>
+      <tr><td><code>POST</code></td><td><code>/api/addresses</code></td><td>customer</td><td>Create address, first one becomes default</td></tr>
+      <tr><td><code>PATCH</code></td><td><code>/api/addresses/[id]</code></td><td>owner</td><td>Update address or promote to default</td></tr>
+      <tr><td><code>DELETE</code></td><td><code>/api/addresses/[id]</code></td><td>owner</td><td>Delete address, promote the next one</td></tr>
+      <tr><td><code>POST</code></td><td><code>/api/webhooks/stripe</code></td><td>Stripe signature</td><td>Verify, store once, mark order paid, decrement stock</td></tr>
+    </tbody>
+  </table>
+  <p class="lead" style="font-size:12px">Access levels are enforced on the server; hiding a link in the UI is never the control.</p>
+  <div class="footer"><span>API · implemented</span><span>9 / 15</span></div>
+</section>
+
+<!-- 10 -->
+<section class="slide">
+  <div class="kicker">API surface</div>
+  <h2>Frozen for P3</h2>
+  <div class="grid2" style="margin-top:14px">
+    <table style="margin-top:0">
+      <thead><tr><th style="width:64px">Method</th><th>Route</th><th style="width:78px">Access</th></tr></thead>
+      <tbody>
+        <tr><td><code>GET</code></td><td><code>/api/cart</code></td><td>customer</td></tr>
+        <tr><td><code>POST</code></td><td><code>/api/cart/items</code></td><td>customer</td></tr>
+        <tr><td><code>PATCH</code></td><td><code>/api/cart/items/[id]</code></td><td>owner</td></tr>
+        <tr><td><code>DELETE</code></td><td><code>/api/cart/items/[id]</code></td><td>owner</td></tr>
+        <tr><td><code>POST</code></td><td><code>/api/checkout</code></td><td>customer</td></tr>
+        <tr><td><code>GET</code></td><td><code>/api/orders</code></td><td>customer</td></tr>
+        <tr><td><code>GET</code></td><td><code>/api/orders/[id]</code></td><td>owner</td></tr>
+        <tr><td><code>GET</code></td><td><code>/api/delivery-methods</code></td><td>public</td></tr>
+        <tr><td><code>POST</code></td><td><code>/api/discounts/validate</code></td><td>customer</td></tr>
+      </tbody>
+    </table>
+    <table style="margin-top:0">
+      <thead><tr><th style="width:64px">Method</th><th>Admin route</th><th style="width:78px">Access</th></tr></thead>
+      <tbody>
+        <tr><td><code>GET/POST</code></td><td><code>/api/admin/products</code></td><td>ADMIN</td></tr>
+        <tr><td><code>PATCH/DELETE</code></td><td><code>/api/admin/products/[id]</code></td><td>ADMIN</td></tr>
+        <tr><td><code>POST</code></td><td><code>/api/admin/products/[id]/images</code></td><td>ADMIN</td></tr>
+        <tr><td><code>GET/POST</code></td><td><code>/api/admin/categories</code></td><td>ADMIN</td></tr>
+        <tr><td><code>PATCH/DELETE</code></td><td><code>/api/admin/categories/[id]</code></td><td>ADMIN</td></tr>
+        <tr><td><code>GET</code></td><td><code>/api/admin/orders</code></td><td>ADMIN</td></tr>
+        <tr><td><code>PATCH</code></td><td><code>/api/admin/orders/[id]/status</code></td><td>ADMIN</td></tr>
+        <tr><td><code>GET</code></td><td><code>/api/admin/dashboard</code></td><td>ADMIN (B4)</td></tr>
+        <tr><td><code>GET/POST/PATCH</code></td><td><code>/api/admin/discounts</code></td><td>ADMIN (B5)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="footer"><span>API · frozen for P3</span><span>10 / 15</span></div>
+</section>
+
+<!-- 11 -->
+<section class="slide">
+  <div class="kicker">Critical flow</div>
+  <h2>Payment sequence</h2>
+  <div class="imgbox" style="height:512px;margin-top:16px"><img src="sequence.png" alt="Payment sequence diagram"></div>
+  <div class="footer"><span>Sequence · checkout → webhook → stock</span><span>11 / 15</span></div>
+</section>
+
+<!-- 12 -->
+<section class="slide">
+  <div class="kicker">User interface</div>
+  <h2>Wireframes — catalog, product, cart</h2>
+  <div class="grid3" style="margin-top:16px">
+    <div class="shot"><img src="wireframe-catalog.png" alt="Catalog wireframe"><span>Catalog · A1</span></div>
+    <div class="shot"><img src="wireframe-product.png" alt="Product wireframe"><span>Product · A1</span></div>
+    <div class="shot"><img src="wireframe-cart.png" alt="Cart wireframe"><span>Cart · A3</span></div>
+  </div>
+  <p class="lead" style="font-size:12px">Wide screens shown; every customer page keeps the same hierarchy at 360 px, with the product grid collapsing from four columns to two.</p>
+  <div class="footer"><span>Wireframes · 1 of 2</span><span>12 / 15</span></div>
+</section>
+
+<!-- 13 -->
+<section class="slide">
+  <div class="kicker">User interface</div>
+  <h2>Wireframes — checkout, administration</h2>
+  <div class="grid2" style="margin-top:16px">
+    <div class="shot"><img src="wireframe-checkout.png" alt="Checkout wireframe"><span>Checkout · A5 / A6</span></div>
+    <div class="shot"><img src="wireframe-admin.png" alt="Admin wireframe"><span>Administration · A9</span></div>
+  </div>
+  <p class="lead" style="font-size:12px">Checkout makes the delivery cost and the payment state explicit. The admin panel exposes role-guarded CRUD, status filters and the audited transition path.</p>
+  <div class="footer"><span>Wireframes · 2 of 2</span><span>13 / 15</span></div>
+</section>
+
+<!-- 14 -->
+<section class="slide">
+  <div class="kicker">Working prototype</div>
+  <h2>Live data from MySQL</h2>
+  <div class="grid3" style="margin-top:16px">
+    <div class="shot"><img src="../screenshots/home-1440.png" alt="Home page"><span>Home · 1440 px</span></div>
+    <div class="shot"><img src="../screenshots/catalog-1440.png" alt="Catalog page"><span>Catalog · A1</span></div>
+    <div class="shot"><img src="../screenshots/product-1440.png" alt="Product page"><span>Product · siblings</span></div>
+  </div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="shot"><img src="../screenshots/search-1440.png" alt="Search results"><span>Search · A2</span></div>
+    <div class="shot"><img src="../screenshots/login-1440.png" alt="Login page"><span>Login · A4</span></div>
+    <div class="shot"><img src="../screenshots/account-1440.png" alt="Account page"><span>Account · addresses</span></div>
+  </div>
+  <div class="footer"><span>Prototype · seeded database</span><span>14 / 15</span></div>
+</section>
+
+<!-- 15 -->
+<section class="slide">
+  <div class="kicker">Plan, risks and questions</div>
+  <h2>Weeks 8–12</h2>
+  <div style="display:grid;grid-template-columns:1.15fr .85fr;gap:26px;margin-top:16px">
+    <table style="margin-top:0">
+      <thead><tr><th style="width:78px">Week</th><th>Work</th><th style="width:120px">Owner</th><th style="width:74px">Status</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>P1, repository, README</td><td>All</td><td class="ok">done</td></tr>
+        <tr><td>4</td><td>ERD, endpoints, wireframes</td><td>All</td><td class="ok">done</td></tr>
+        <tr><td>5</td><td>Seed data · A1 catalog · A4 accounts</td><td>Cosmin, Iulian</td><td class="ok">done</td></tr>
+        <tr><td>6</td><td>A2 search · Stripe setup · login prototype</td><td>Cosmin, Rares</td><td class="ok">done</td></tr>
+        <tr><td>7</td><td>P2 specification and live prototype</td><td>All</td><td class="ok">done</td></tr>
+        <tr><td>8</td><td>A3 cart · A5 checkout</td><td>Iulian, Rares</td><td class="next">next</td></tr>
+        <tr><td>9</td><td>A6 confirmation · A7 stock · A8 history</td><td>Rares, Iulian</td><td class="later">planned</td></tr>
+        <tr><td>10</td><td>A9 admin panel · A10 security</td><td>Cosmin, Rares</td><td class="later">planned</td></tr>
+        <tr><td>11</td><td>A11 responsive · A12 tests · B4 + B5</td><td>Cosmin, Iulian</td><td class="later">planned</td></tr>
+        <tr><td>12</td><td>P3 bug fixes, backup video, final README</td><td>All</td><td class="later">planned</td></tr>
+      </tbody>
+    </table>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div class="card"><h3>Risks we watch</h3><ul><li><b>Payments &amp; stock:</b> webhook-first, conditional update, transaction tests.</li><li><b>Integration:</b> frozen contracts and small merges.</li><li><b>Scope:</b> required features first, feature freeze in week 11.</li></ul></div>
+      <div class="card" style="border-color:rgba(95,224,164,.5)"><h3>Thank you — questions</h3><p>Repository, branch and PR links are in the README and the specification document.</p></div>
+    </div>
+  </div>
+  <div class="footer"><span>Schedule · risks · Q&amp;A</span><span>15 / 15</span></div>
+</section>
+
+</body>
+</html>
