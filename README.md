@@ -178,5 +178,4 @@ status is in `docs/P2-schedule.md`; Stripe test cards and webhook commands are i
 AI coding tools were used for **code generation, code review, test scaffolding,
 and documentation drafts**. The primary tool was **OpenCode** running the
 **DeepSeek V4.1 Flash** model. Every AI-generated change was reviewed, run and
-tested by the team before it was merged; the team remains responsible for the
-final code and documentation and can explain every part of it.
+tested by the team before it was merged.
