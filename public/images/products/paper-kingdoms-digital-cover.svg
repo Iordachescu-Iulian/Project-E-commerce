@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-labelledby="paper-kingdoms-digital-cover-title paper-kingdoms-digital-cover-desc" shape-rendering="geometricPrecision" font-family="Arial, Helvetica, sans-serif">
+  <title id="paper-kingdoms-digital-cover-title">Paper Kingdoms — Digital Edition</title>
+  <desc id="paper-kingdoms-digital-cover-desc">Cover art for Paper Kingdoms, Digital Edition, on Nintendo Switch.</desc>
+  <defs>
+    <linearGradient id="paper-kingdoms-digital-cover-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1E1B"/>
+      <stop offset="52%" stop-color="#113631"/>
+      <stop offset="100%" stop-color="#185958"/>
+    </linearGradient>
+    <radialGradient id="paper-kingdoms-digital-cover-glow" cx="0.78" cy="0.2" r="0.72">
+      <stop offset="0%" stop-color="#DDC640" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#DDC640" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="paper-kingdoms-digital-cover-mesh" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M28 1 L54 15 L54 33 L28 47 L2 33 L2 15 Z" fill="none" stroke="#F4F2EC" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="paper-kingdoms-digital-cover-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="600" height="800" fill="url(#paper-kingdoms-digital-cover-bg)"/>
+  <rect width="600" height="800" fill="url(#paper-kingdoms-digital-cover-glow)"/>
+  <rect width="600" height="800" fill="url(#paper-kingdoms-digital-cover-mesh)"/>
+  <rect width="8" height="800" fill="#5FE0A4"/>
+  <polygon points="531.2,489.3 610.5,603.4 551.3,729.2 412.8,740.7 333.5,626.6 392.7,500.8" fill="#185958" fill-opacity="0.24" stroke="#DDC640" stroke-opacity="0.55" stroke-width="2"/>
+    <polygon points="502.8,525.6 564.8,597.0 534.0,686.3 441.2,704.4 379.2,633.0 410.0,543.7" fill="#0B1E1B" fill-opacity="0.62" stroke="#F4F2EC" stroke-opacity="0.14" stroke-width="1.5"/>
+    <polygon points="483.3,566.2 519.9,600.4 508.6,649.1 460.7,663.8 424.1,629.6 435.4,580.9" fill="#DDC640" fill-opacity="0.16" stroke="#DDC640" stroke-opacity="0.7" stroke-width="2"/>
+  <polygon points="381.2,804.3 396.8,821.9 389.4,844.2 366.4,848.9 350.8,831.4 358.2,809.1" fill="none" stroke="#DDC640" stroke-opacity="0.44" stroke-width="1.5"/>
+    <polygon points="411.1,432.4 418.2,456.1 401.3,474.2 377.2,468.5 370.1,444.8 387.0,426.8" fill="none" stroke="#DDC640" stroke-opacity="0.51" stroke-width="1.5"/>
+    <polygon points="383.4,812.5 392.1,831.9 379.6,849.0 358.5,846.8 349.9,827.5 362.3,810.3" fill="none" stroke="#DDC640" stroke-opacity="0.39" stroke-width="1.5"/>
+    <polygon points="576.6,781.1 594.0,799.2 586.9,823.4 562.5,829.3 545.1,811.2 552.1,787.0" fill="none" stroke="#DDC640" stroke-opacity="0.35" stroke-width="1.5"/>
+    <polygon points="625.3,761.9 632.7,785.7 615.8,803.9 591.5,798.4 584.1,774.7 601.0,756.4" fill="none" stroke="#DDC640" stroke-opacity="0.41" stroke-width="1.5"/>
+  <text x="56" y="64" font-size="18" font-weight="900" letter-spacing="6" fill="#F4F2EC">HEXORA</text>
+  <text x="56" y="100" font-size="13" font-weight="700" letter-spacing="3" fill="#B8B4CC">INDIE &amp; STRATEGY</text>
+  <rect x="56" y="122" width="62" height="3" rx="1.5" fill="#5FE0A4"/>
+  <rect x="416" y="38" width="128" height="34" rx="17" fill="#14121F" fill-opacity="0.55" stroke="#5FE0A4" stroke-opacity="0.65"/>
+    <text x="480" y="60" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="2.4" fill="#5FE0A4">DIGITAL</text>
+  <text filter="url(#paper-kingdoms-digital-cover-shadow)" font-size="72" font-weight="900" text-anchor="middle" letter-spacing="-1" fill="#F4F2EC"><tspan x="300" y="343.8">Paper</tspan><tspan x="300" y="420.2">Kingdoms</tspan></text>
+  <rect x="56" y="662" width="488" height="1" fill="#F4F2EC" fill-opacity="0.14"/>
+  <rect x="56" y="690" width="173" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.07" stroke="#F4F2EC" stroke-opacity="0.22"/>
+    <text x="78" y="715" font-size="14" font-weight="700" letter-spacing="0.6" fill="#F4F2EC">Nintendo Switch</text>
+  <text x="56" y="768" font-size="16" font-weight="800" letter-spacing="3.6" fill="#5FE0A4">DIGITAL EDITION</text>
+  <text x="544" y="768" text-anchor="end" font-size="11" font-weight="700" letter-spacing="2.4" fill="#B8B4CC">INSTANT DELIVERY</text>
+</svg>

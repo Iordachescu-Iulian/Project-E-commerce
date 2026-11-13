@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="iron-vector-digital-banner-title iron-vector-digital-banner-desc" shape-rendering="geometricPrecision" font-family="Arial, Helvetica, sans-serif">
+  <title id="iron-vector-digital-banner-title">Iron Vector — Digital Edition</title>
+  <desc id="iron-vector-digital-banner-desc">Banner art for Iron Vector, Digital Edition, on PC.</desc>
+  <defs>
+    <linearGradient id="iron-vector-digital-banner-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B171E"/>
+      <stop offset="52%" stop-color="#112936"/>
+      <stop offset="100%" stop-color="#183859"/>
+    </linearGradient>
+    <radialGradient id="iron-vector-digital-banner-glow" cx="0.78" cy="0.2" r="0.72">
+      <stop offset="0%" stop-color="#40DD8F" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#40DD8F" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="iron-vector-digital-banner-mesh" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M28 1 L54 15 L54 33 L28 47 L2 33 L2 15 Z" fill="none" stroke="#F4F2EC" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="iron-vector-digital-banner-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#iron-vector-digital-banner-bg)"/>
+  <rect width="1200" height="600" fill="url(#iron-vector-digital-banner-glow)"/>
+  <rect width="1200" height="600" fill="url(#iron-vector-digital-banner-mesh)"/>
+  <rect width="8" height="600" fill="#5FE0A4"/>
+  <line x1="770" y1="0" x2="650" y2="600" stroke="#F4F2EC" stroke-opacity="0.07" stroke-width="1"/>
+  <polygon points="975.8,132.2 1114.2,244.2 1086.4,420.0 920.2,483.8 781.8,371.8 809.6,196.0" fill="#183859" fill-opacity="0.24" stroke="#40DD8F" stroke-opacity="0.55" stroke-width="2"/>
+    <polygon points="955.7,187.2 1056.4,254.2 1048.8,375.0 940.3,428.8 839.6,361.8 847.2,241.0" fill="#0B171E" fill-opacity="0.62" stroke="#F4F2EC" stroke-opacity="0.14" stroke-width="1.5"/>
+    <polygon points="971.9,248.5 1011.4,298.9 987.6,358.4 924.1,367.5 884.6,317.1 908.4,257.6" fill="#40DD8F" fill-opacity="0.16" stroke="#40DD8F" stroke-opacity="0.7" stroke-width="2"/>
+  <polygon points="1214.0,197.5 1238.1,219.5 1231.1,251.4 1200.0,261.3 1175.8,239.3 1182.8,207.4" fill="none" stroke="#40DD8F" stroke-opacity="0.31" stroke-width="1.5"/>
+    <polygon points="957.8,604.1 964.7,631.3 944.6,650.9 917.6,643.3 910.6,616.1 930.7,596.5" fill="none" stroke="#40DD8F" stroke-opacity="0.36" stroke-width="1.5"/>
+    <polygon points="1028.0,-19.0 1055.2,-1.5 1053.7,30.8 1025.0,45.6 997.8,28.1 999.3,-4.2" fill="none" stroke="#40DD8F" stroke-opacity="0.34" stroke-width="1.5"/>
+    <polygon points="787.9,465.5 817.5,485.7 814.8,521.5 782.5,537.0 752.9,516.8 755.6,481.1" fill="none" stroke="#40DD8F" stroke-opacity="0.36" stroke-width="1.5"/>
+    <polygon points="1176.3,128.2 1184.1,146.1 1172.5,161.7 1153.2,159.5 1145.5,141.7 1157.0,126.0" fill="none" stroke="#40DD8F" stroke-opacity="0.36" stroke-width="1.5"/>
+  <text x="72" y="62" font-size="18" font-weight="900" letter-spacing="6" fill="#F4F2EC">HEXORA</text>
+  <text x="72" y="100" font-size="13" font-weight="700" letter-spacing="3" fill="#B8B4CC">SHOOTERS</text>
+  <rect x="72" y="124" width="62" height="3" rx="1.5" fill="#5FE0A4"/>
+  <rect x="1000" y="38" width="128" height="34" rx="17" fill="#14121F" fill-opacity="0.55" stroke="#5FE0A4" stroke-opacity="0.65"/>
+    <text x="1064" y="60" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="2.4" fill="#5FE0A4">DIGITAL</text>
+  <text filter="url(#iron-vector-digital-banner-shadow)" font-size="88" font-weight="900" text-anchor="middle" letter-spacing="-1" fill="#F4F2EC"><tspan x="386" y="286.0">Iron Vector</tspan></text>
+  <rect x="72" y="436" width="628" height="1" fill="#F4F2EC" fill-opacity="0.14"/>
+  <rect x="72" y="466" width="120" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.07" stroke="#F4F2EC" stroke-opacity="0.22"/>
+    <text x="94" y="491" font-size="14" font-weight="700" letter-spacing="0.6" fill="#F4F2EC">PC</text>
+  <text x="72" y="554" font-size="16" font-weight="800" letter-spacing="3.6" fill="#5FE0A4">DIGITAL EDITION</text>
+  <text x="700" y="554" text-anchor="end" font-size="11" font-weight="700" letter-spacing="2.4" fill="#B8B4CC">INSTANT DELIVERY</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-labelledby="orbit-weavers-digital-cover-title orbit-weavers-digital-cover-desc" shape-rendering="geometricPrecision" font-family="Arial, Helvetica, sans-serif">
+  <title id="orbit-weavers-digital-cover-title">Orbit Weavers — Digital Edition</title>
+  <desc id="orbit-weavers-digital-cover-desc">Cover art for Orbit Weavers, Digital Edition, on PC.</desc>
+  <defs>
+    <linearGradient id="orbit-weavers-digital-cover-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1E1C"/>
+      <stop offset="52%" stop-color="#113632"/>
+      <stop offset="100%" stop-color="#185859"/>
+    </linearGradient>
+    <radialGradient id="orbit-weavers-digital-cover-glow" cx="0.78" cy="0.2" r="0.72">
+      <stop offset="0%" stop-color="#DDCB40" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#DDCB40" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="orbit-weavers-digital-cover-mesh" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M28 1 L54 15 L54 33 L28 47 L2 33 L2 15 Z" fill="none" stroke="#F4F2EC" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="orbit-weavers-digital-cover-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="600" height="800" fill="url(#orbit-weavers-digital-cover-bg)"/>
+  <rect width="600" height="800" fill="url(#orbit-weavers-digital-cover-glow)"/>
+  <rect width="600" height="800" fill="url(#orbit-weavers-digital-cover-mesh)"/>
+  <rect width="8" height="800" fill="#5FE0A4"/>
+  <polygon points="549.2,489.6 616.0,598.8 554.7,711.2 426.8,714.4 360.0,605.2 421.3,492.8" fill="#185859" fill-opacity="0.24" stroke="#DDCB40" stroke-opacity="0.55" stroke-width="2"/>
+    <polygon points="519.8,521.0 574.1,589.1 542.2,670.1 456.2,683.0 401.9,614.9 433.8,533.9" fill="#0B1E1C" fill-opacity="0.62" stroke="#F4F2EC" stroke-opacity="0.14" stroke-width="1.5"/>
+    <polygon points="497.5,556.9 531.8,587.7 522.3,632.8 478.5,647.1 444.2,616.3 453.7,571.2" fill="#DDCB40" fill-opacity="0.16" stroke="#DDCB40" stroke-opacity="0.7" stroke-width="2"/>
+  <polygon points="483.3,796.9 488.7,817.1 473.9,832.0 453.7,826.5 448.3,806.3 463.1,791.5" fill="none" stroke="#DDCB40" stroke-opacity="0.31" stroke-width="1.5"/>
+    <polygon points="367.4,383.5 385.5,397.2 382.6,419.7 361.7,428.5 343.6,414.8 346.5,392.3" fill="none" stroke="#DDCB40" stroke-opacity="0.44" stroke-width="1.5"/>
+    <polygon points="628.8,490.4 641.5,500.2 639.4,516.1 624.7,522.2 611.9,512.5 614.0,496.6" fill="none" stroke="#DDCB40" stroke-opacity="0.37" stroke-width="1.5"/>
+    <polygon points="338.8,694.9 346.9,708.1 339.6,721.7 324.1,722.2 316.0,709.0 323.3,695.3" fill="none" stroke="#DDCB40" stroke-opacity="0.26" stroke-width="1.5"/>
+    <polygon points="705.5,651.6 725.5,668.1 721.3,693.5 697.1,702.6 677.1,686.2 681.3,660.7" fill="none" stroke="#DDCB40" stroke-opacity="0.47" stroke-width="1.5"/>
+  <text x="56" y="64" font-size="18" font-weight="900" letter-spacing="6" fill="#F4F2EC">HEXORA</text>
+  <text x="56" y="100" font-size="13" font-weight="700" letter-spacing="3" fill="#B8B4CC">INDIE &amp; STRATEGY</text>
+  <rect x="56" y="122" width="62" height="3" rx="1.5" fill="#5FE0A4"/>
+  <rect x="416" y="38" width="128" height="34" rx="17" fill="#14121F" fill-opacity="0.55" stroke="#5FE0A4" stroke-opacity="0.65"/>
+    <text x="480" y="60" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="2.4" fill="#5FE0A4">DIGITAL</text>
+  <text filter="url(#orbit-weavers-digital-cover-shadow)" font-size="72" font-weight="900" text-anchor="middle" letter-spacing="-1" fill="#F4F2EC"><tspan x="300" y="343.8">Orbit</tspan><tspan x="300" y="420.2">Weavers</tspan></text>
+  <rect x="56" y="662" width="488" height="1" fill="#F4F2EC" fill-opacity="0.14"/>
+  <rect x="56" y="690" width="120" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.07" stroke="#F4F2EC" stroke-opacity="0.22"/>
+    <text x="78" y="715" font-size="14" font-weight="700" letter-spacing="0.6" fill="#F4F2EC">PC</text>
+  <text x="56" y="768" font-size="16" font-weight="800" letter-spacing="3.6" fill="#5FE0A4">DIGITAL EDITION</text>
+  <text x="544" y="768" text-anchor="end" font-size="11" font-weight="700" letter-spacing="2.4" fill="#B8B4CC">INSTANT DELIVERY</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="moonsong-saga-digital-banner-title moonsong-saga-digital-banner-desc" shape-rendering="geometricPrecision" font-family="Arial, Helvetica, sans-serif">
+  <title id="moonsong-saga-digital-banner-title">Moonsong Saga — Digital Edition</title>
+  <desc id="moonsong-saga-digital-banner-desc">Banner art for Moonsong Saga, Digital Edition, on Nintendo Switch.</desc>
+  <defs>
+    <linearGradient id="moonsong-saga-digital-banner-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#120B1E"/>
+      <stop offset="52%" stop-color="#1F1136"/>
+      <stop offset="100%" stop-color="#391859"/>
+    </linearGradient>
+    <radialGradient id="moonsong-saga-digital-banner-glow" cx="0.78" cy="0.2" r="0.72">
+      <stop offset="0%" stop-color="#DD40BB" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#DD40BB" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="moonsong-saga-digital-banner-mesh" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M28 1 L54 15 L54 33 L28 47 L2 33 L2 15 Z" fill="none" stroke="#F4F2EC" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="moonsong-saga-digital-banner-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#moonsong-saga-digital-banner-bg)"/>
+  <rect width="1200" height="600" fill="url(#moonsong-saga-digital-banner-glow)"/>
+  <rect width="1200" height="600" fill="url(#moonsong-saga-digital-banner-mesh)"/>
+  <rect width="8" height="600" fill="#5FE0A4"/>
+  <line x1="770" y1="0" x2="650" y2="600" stroke="#F4F2EC" stroke-opacity="0.07" stroke-width="1"/>
+  <polygon points="954.7,107.0 1106.8,217.5 1087.1,404.5 915.3,481.0 763.2,370.5 782.9,183.5" fill="#391859" fill-opacity="0.24" stroke="#DD40BB" stroke-opacity="0.55" stroke-width="2"/>
+    <polygon points="943.4,166.4 1049.7,237.5 1041.3,365.0 926.6,421.6 820.3,350.5 828.7,223.0" fill="#120B1E" fill-opacity="0.62" stroke="#F4F2EC" stroke-opacity="0.14" stroke-width="1.5"/>
+    <polygon points="940.1,226.5 996.0,264.7 990.9,332.2 929.9,361.5 874.0,323.3 879.1,255.8" fill="#DD40BB" fill-opacity="0.16" stroke="#DD40BB" stroke-opacity="0.7" stroke-width="2"/>
+  <polygon points="738.5,97.1 760.7,119.0 752.9,149.2 722.8,157.5 700.6,135.6 708.4,105.4" fill="none" stroke="#DD40BB" stroke-opacity="0.47" stroke-width="1.5"/>
+    <polygon points="1096.0,-46.4 1110.5,-12.4 1088.4,17.1 1051.8,12.7 1037.3,-21.3 1059.4,-50.8" fill="none" stroke="#DD40BB" stroke-opacity="0.26" stroke-width="1.5"/>
+    <polygon points="1215.3,463.0 1230.1,485.5 1218.0,509.6 1191.1,511.2 1176.3,488.7 1188.4,464.6" fill="none" stroke="#DD40BB" stroke-opacity="0.30" stroke-width="1.5"/>
+    <polygon points="1044.0,572.1 1060.5,599.5 1045.1,627.5 1013.1,628.2 996.5,600.8 1012.0,572.7" fill="none" stroke="#DD40BB" stroke-opacity="0.45" stroke-width="1.5"/>
+    <polygon points="804.3,490.6 813.6,510.4 801.2,528.3 779.4,526.4 770.1,506.7 782.6,488.8" fill="none" stroke="#DD40BB" stroke-opacity="0.50" stroke-width="1.5"/>
+  <text x="72" y="62" font-size="18" font-weight="900" letter-spacing="6" fill="#F4F2EC">HEXORA</text>
+  <text x="72" y="100" font-size="13" font-weight="700" letter-spacing="3" fill="#B8B4CC">RPG</text>
+  <rect x="72" y="124" width="62" height="3" rx="1.5" fill="#5FE0A4"/>
+  <rect x="1000" y="38" width="128" height="34" rx="17" fill="#14121F" fill-opacity="0.55" stroke="#5FE0A4" stroke-opacity="0.65"/>
+    <text x="1064" y="60" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="2.4" fill="#5FE0A4">DIGITAL</text>
+  <text filter="url(#moonsong-saga-digital-banner-shadow)" font-size="88" font-weight="900" text-anchor="middle" letter-spacing="-1" fill="#F4F2EC"><tspan x="386" y="239.4">Moonsong</tspan><tspan x="386" y="332.6">Saga</tspan></text>
+  <rect x="72" y="436" width="628" height="1" fill="#F4F2EC" fill-opacity="0.14"/>
+  <rect x="72" y="466" width="173" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.07" stroke="#F4F2EC" stroke-opacity="0.22"/>
+    <text x="94" y="491" font-size="14" font-weight="700" letter-spacing="0.6" fill="#F4F2EC">Nintendo Switch</text>
+  <text x="72" y="554" font-size="16" font-weight="800" letter-spacing="3.6" fill="#5FE0A4">DIGITAL EDITION</text>
+  <text x="700" y="554" text-anchor="end" font-size="11" font-weight="700" letter-spacing="2.4" fill="#B8B4CC">INSTANT DELIVERY</text>
+</svg>

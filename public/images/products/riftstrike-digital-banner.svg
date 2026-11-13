@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="riftstrike-digital-banner-title riftstrike-digital-banner-desc" shape-rendering="geometricPrecision" font-family="Arial, Helvetica, sans-serif">
+  <title id="riftstrike-digital-banner-title">Riftstrike — Digital Edition</title>
+  <desc id="riftstrike-digital-banner-desc">Banner art for Riftstrike, Digital Edition, on PlayStation 5.</desc>
+  <defs>
+    <linearGradient id="riftstrike-digital-banner-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B171E"/>
+      <stop offset="52%" stop-color="#112936"/>
+      <stop offset="100%" stop-color="#183959"/>
+    </linearGradient>
+    <radialGradient id="riftstrike-digital-banner-glow" cx="0.78" cy="0.2" r="0.72">
+      <stop offset="0%" stop-color="#40DD8C" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#40DD8C" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="riftstrike-digital-banner-mesh" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M28 1 L54 15 L54 33 L28 47 L2 33 L2 15 Z" fill="none" stroke="#F4F2EC" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="riftstrike-digital-banner-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#riftstrike-digital-banner-bg)"/>
+  <rect width="1200" height="600" fill="url(#riftstrike-digital-banner-glow)"/>
+  <rect width="1200" height="600" fill="url(#riftstrike-digital-banner-mesh)"/>
+  <rect width="8" height="600" fill="#5FE0A4"/>
+  <line x1="770" y1="0" x2="650" y2="600" stroke="#F4F2EC" stroke-opacity="0.07" stroke-width="1"/>
+  <polygon points="1043.1,150.1 1140.7,298.9 1060.6,457.9 882.9,467.9 785.3,319.1 865.4,160.1" fill="#183959" fill-opacity="0.24" stroke="#40DD8C" stroke-opacity="0.55" stroke-width="2"/>
+    <polygon points="964.3,188.0 1068.5,249.6 1067.2,370.6 961.7,430.0 857.5,368.4 858.8,247.4" fill="#0B171E" fill-opacity="0.62" stroke="#F4F2EC" stroke-opacity="0.14" stroke-width="1.5"/>
+    <polygon points="974.1,245.9 1023.2,287.1 1012.1,350.2 951.9,372.1 902.8,330.9 913.9,267.8" fill="#40DD8C" fill-opacity="0.16" stroke="#40DD8C" stroke-opacity="0.7" stroke-width="2"/>
+  <polygon points="787.9,78.3 807.9,109.5 791.0,142.5 754.0,144.2 733.9,113.1 750.8,80.1" fill="none" stroke="#40DD8C" stroke-opacity="0.39" stroke-width="1.5"/>
+    <polygon points="1195.2,118.3 1225.8,138.5 1223.7,175.1 1190.9,191.6 1160.2,171.4 1162.3,134.7" fill="none" stroke="#40DD8C" stroke-opacity="0.49" stroke-width="1.5"/>
+    <polygon points="1205.0,121.3 1222.7,150.3 1206.5,180.2 1172.5,181.0 1154.8,152.1 1171.0,122.2" fill="none" stroke="#40DD8C" stroke-opacity="0.49" stroke-width="1.5"/>
+    <polygon points="1086.1,43.2 1093.4,59.9 1082.6,74.6 1064.4,72.5 1057.2,55.8 1068.0,41.1" fill="none" stroke="#40DD8C" stroke-opacity="0.39" stroke-width="1.5"/>
+    <polygon points="671.4,216.0 684.9,243.7 667.6,269.2 636.8,267.0 623.4,239.3 640.7,213.8" fill="none" stroke="#40DD8C" stroke-opacity="0.44" stroke-width="1.5"/>
+  <text x="72" y="62" font-size="18" font-weight="900" letter-spacing="6" fill="#F4F2EC">HEXORA</text>
+  <text x="72" y="100" font-size="13" font-weight="700" letter-spacing="3" fill="#B8B4CC">SHOOTERS</text>
+  <rect x="72" y="124" width="62" height="3" rx="1.5" fill="#5FE0A4"/>
+  <rect x="1000" y="38" width="128" height="34" rx="17" fill="#14121F" fill-opacity="0.55" stroke="#5FE0A4" stroke-opacity="0.65"/>
+    <text x="1064" y="60" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="2.4" fill="#5FE0A4">DIGITAL</text>
+  <text filter="url(#riftstrike-digital-banner-shadow)" font-size="88" font-weight="900" text-anchor="middle" letter-spacing="-1" fill="#F4F2EC"><tspan x="386" y="286.0">Riftstrike</tspan></text>
+  <rect x="72" y="436" width="628" height="1" fill="#F4F2EC" fill-opacity="0.14"/>
+  <rect x="72" y="466" width="156" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.07" stroke="#F4F2EC" stroke-opacity="0.22"/>
+    <text x="94" y="491" font-size="14" font-weight="700" letter-spacing="0.6" fill="#F4F2EC">PlayStation 5</text>
+  <text x="72" y="554" font-size="16" font-weight="800" letter-spacing="3.6" fill="#5FE0A4">DIGITAL EDITION</text>
+  <text x="700" y="554" text-anchor="end" font-size="11" font-weight="700" letter-spacing="2.4" fill="#B8B4CC">INSTANT DELIVERY</text>
+</svg>

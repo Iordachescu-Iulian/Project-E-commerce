@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-labelledby="riftstrike-physical-banner-title riftstrike-physical-banner-desc" shape-rendering="geometricPrecision" font-family="Arial, Helvetica, sans-serif">
+  <title id="riftstrike-physical-banner-title">Riftstrike — Physical Edition</title>
+  <desc id="riftstrike-physical-banner-desc">Banner art for Riftstrike, Physical Edition, on PlayStation 5.</desc>
+  <defs>
+    <linearGradient id="riftstrike-physical-banner-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B181E"/>
+      <stop offset="52%" stop-color="#112336"/>
+      <stop offset="100%" stop-color="#1D346D"/>
+    </linearGradient>
+    <radialGradient id="riftstrike-physical-banner-glow" cx="0.78" cy="0.2" r="0.72">
+      <stop offset="0%" stop-color="#5AE297" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#5AE297" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="riftstrike-physical-banner-mesh" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M28 1 L54 15 L54 33 L28 47 L2 33 L2 15 Z" fill="none" stroke="#F4F2EC" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="riftstrike-physical-banner-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="600" fill="url(#riftstrike-physical-banner-bg)"/>
+  <rect width="1200" height="600" fill="url(#riftstrike-physical-banner-glow)"/>
+  <rect width="1200" height="600" fill="url(#riftstrike-physical-banner-mesh)"/>
+  <rect width="8" height="600" fill="#5AE297"/>
+  <line x1="770" y1="0" x2="650" y2="600" stroke="#F4F2EC" stroke-opacity="0.07" stroke-width="1"/>
+  <polygon points="973.6,113.4 1107.7,242.3 1063.1,422.9 884.4,474.6 750.3,345.7 794.9,165.1" fill="#1D346D" fill-opacity="0.24" stroke="#5AE297" stroke-opacity="0.55" stroke-width="2"/>
+    <polygon points="969.4,174.2 1053.0,269.1 1012.6,388.9 888.6,413.8 805.0,318.9 845.4,199.1" fill="#0B181E" fill-opacity="0.62" stroke="#F4F2EC" stroke-opacity="0.14" stroke-width="1.5"/>
+    <polygon points="931.1,227.1 988.0,262.4 985.9,329.3 926.9,360.9 870.0,325.6 872.1,258.7" fill="#5AE297" fill-opacity="0.16" stroke="#5AE297" stroke-opacity="0.7" stroke-width="2"/>
+  <polygon points="1153.5,114.4 1163.8,144.0 1143.3,167.8 1112.4,161.9 1102.1,132.3 1122.6,108.5" fill="none" stroke="#5AE297" stroke-opacity="0.37" stroke-width="1.5"/>
+    <polygon points="1159.6,92.2 1174.3,123.9 1154.2,152.6 1119.3,149.4 1104.6,117.7 1124.8,89.0" fill="none" stroke="#5AE297" stroke-opacity="0.50" stroke-width="1.5"/>
+    <polygon points="1139.5,54.3 1152.0,81.0 1135.1,105.2 1105.8,102.7 1093.2,76.0 1110.1,51.8" fill="none" stroke="#5AE297" stroke-opacity="0.51" stroke-width="1.5"/>
+    <polygon points="1169.1,69.1 1199.2,89.4 1196.7,125.6 1164.1,141.5 1134.0,121.3 1136.4,85.0" fill="none" stroke="#5AE297" stroke-opacity="0.38" stroke-width="1.5"/>
+    <polygon points="607.3,208.1 633.9,233.1 625.5,268.6 590.5,279.1 564.0,254.1 572.4,218.6" fill="none" stroke="#5AE297" stroke-opacity="0.28" stroke-width="1.5"/>
+  <text x="72" y="62" font-size="18" font-weight="900" letter-spacing="6" fill="#F4F2EC">HEXORA</text>
+  <text x="72" y="100" font-size="13" font-weight="700" letter-spacing="3" fill="#B8B4CC">SHOOTERS</text>
+  <rect x="72" y="124" width="62" height="3" rx="1.5" fill="#5AE297"/>
+  <rect x="1000" y="38" width="128" height="34" rx="17" fill="#14121F" fill-opacity="0.55" stroke="#5AE297" stroke-opacity="0.65"/>
+    <text x="1064" y="60" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="2.4" fill="#5AE297">PHYSICAL</text>
+  <text filter="url(#riftstrike-physical-banner-shadow)" font-size="88" font-weight="900" text-anchor="middle" letter-spacing="-1" fill="#F4F2EC"><tspan x="386" y="286.0">Riftstrike</tspan></text>
+  <rect x="72" y="436" width="628" height="1" fill="#F4F2EC" fill-opacity="0.14"/>
+  <rect x="72" y="466" width="156" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.07" stroke="#F4F2EC" stroke-opacity="0.22"/>
+    <text x="94" y="491" font-size="14" font-weight="700" letter-spacing="0.6" fill="#F4F2EC">PlayStation 5</text>
+  <text x="72" y="554" font-size="16" font-weight="800" letter-spacing="3.6" fill="#5AE297">PHYSICAL EDITION</text>
+  <text x="700" y="554" text-anchor="end" font-size="11" font-weight="700" letter-spacing="2.4" fill="#B8B4CC">BOXED COPY</text>
+</svg>
