@@ -8,7 +8,7 @@ merged, the tests pass and the behaviour was demonstrated in the running app.
 | --- | --- | --- | --- | --- |
 | 3 | P1 presentation, repository, README, stack decision | Next.js 14 + React + Tailwind + Node + MySQL + Stripe chosen; public repository created; P1 deck presented | All | done |
 | 4 | ERD, endpoint list, wireframes, repository workflow | 13-model Prisma schema frozen; 30 endpoints listed with access levels; 5 wireframes; three feature branches agreed | All | done |
-| 5 | Foundation, seed data, A1 catalog, A4 accounts | Next.js foundation, project-local MySQL 8.0.36 on port 3307, 32 seeded editions, catalog/category/product pages, auth and sessions | Cosmin (catalog), Iulian (accounts), Rares (foundation review) | done |
+| 5 | Foundation, seed data, A1 catalog, A4 accounts | Next.js foundation, project-local MySQL 8.0.36 on port 3307, 32 seeded editions, catalog/category/product pages, auth and sessions | Cosmin (catalog), Iulian (accounts) | done |
 | 6 | A2 search, Stripe setup, login prototype | Search and filters, Stripe SDK and webhook signing secret, register/login/logout with signed httpOnly cookie, address book | Cosmin (search), Rares (Stripe), Iulian (accounts) | done |
 | 7 | P2 specification, live prototype, integration | Specification (8 pages), deck (15 slides), ERD/architecture/sequence, wireframes, 14 screenshots, 9 test files, 19 live checks, `p2/integration` and tag `P2` | All | done |
 | 8 | A3 cart, A5 checkout | Cart service and UI, checkout screen with delivery methods and server-computed totals | Iulian (cart), Rares (checkout) | next |
@@ -25,7 +25,7 @@ merged, the tests pass and the behaviour was demonstrated in the running app.
 - The contracts that weeks 8–12 depend on are frozen: schema, endpoints, access
   levels, error shape and the payment sequence.
 - The repository workflow works: one branch per member, one author per branch,
-  review and merge by the other two, integration branch, `P2` tag.
+  each branch merged into the integration branch by another member, `P2` tag.
 
 ## Evidence collected in week 7
 

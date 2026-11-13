@@ -228,7 +228,7 @@ slide = new_slide()
 kicker(slide, "Status since P1")
 heading(slide, "From a plan to a running store")
 lead(slide, "The data model, component architecture and API surface are frozen. The three riskiest areas — catalog, accounts and payments — run against a seeded MySQL database.")
-stats = [("13", "tables in the frozen Prisma schema"), ("32", "purchasable editions from 16 games and 4 categories"), ("9", "test files, one command: npm test"), ("3", "branches, each with its own author and review")]
+stats = [("13", "tables in the frozen Prisma schema"), ("32", "purchasable editions from 16 games and 4 categories"), ("9", "test files, one command: npm test"), ("3", "feature branches, one author each")]
 for index, (value, label) in enumerate(stats):
     x = 64 + index * 290
     rect(slide, x, 200, 272, 96, SURFACE, line=LINE)

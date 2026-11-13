@@ -14,7 +14,7 @@ search, accounts and payment setup. The P2 commit becomes the list against
 which P3 is graded.
 
 The team has three members. Every member must own and submit their own code,
-and the others review and merge it through GitHub pull requests.
+and the others merge it through GitHub pull requests.
 
 ## 2. Goals
 
@@ -269,7 +269,7 @@ Access levels are enforced on the server, not only hidden in the UI.
 - `p2/iulian-accounts`: Iulian's commits.
 - `p2/rares-payments-security`: Rares' commits.
 - Each member pushes their branch and opens a PR against `main`; the other two
-  review and merge.
+  merge it into the integration branch.
 - `p2/integration`: local integration branch with all merges, used for the live
   demo and tagged `P2`. After the PRs are merged, `main` matches it.
 - Commit author identities use each member's GitHub-linked student email.

@@ -149,17 +149,18 @@ against Chrome) and the PDFs with `node scripts/render-spec.mjs` and
 `node scripts/render-deck.mjs`. The deck source is `docs/deliverables/deck.html`
 and the specification source is `docs/deliverables/spec.html`.
 
-## Branches and reviews
+## Branches and merges
 
-Each member wrote one feature branch; the other two reviewed and merged it into
-`p2/integration`, which is then merged into `main` and tagged `P2`.
+Each member wrote one feature branch and opened one pull request against `main`.
+The branches touch no common file, so they merge in any order. `p2/integration`
+combines the three, and is then merged into `main` and tagged `P2`.
 
-| Member | Branch | Contents | Merged by |
+| Member | Branch | Contents | Merged into `p2/integration` by |
 | --- | --- | --- | --- |
 | Iordachescu Iulian Daniel | `p2/iulian-accounts` | Register, login, logout, session, addresses | Nica Rares |
 | Motroc Cosmin Alexandru | `p2/cosmin-catalog-search` | Seed data, catalog, search, product page | Iordachescu Iulian |
 | Nica Rares Octavian | `p2/rares-payments-security` | Security headers, origin guard, Stripe webhook, stock | Motroc Cosmin |
-| All | `p2/integration` → `main` | Merge order Iulian → Cosmin → Rares, tag `P2` | Three-person review |
+| All | `p2/integration` → `main` | Merge order Iulian → Cosmin → Rares, tag `P2` | — |
 
 Pull request descriptions are kept in `docs/PR-DESCRIPTIONS.md`; the week-by-week
 status is in `docs/P2-schedule.md`; Stripe test cards and webhook commands are in

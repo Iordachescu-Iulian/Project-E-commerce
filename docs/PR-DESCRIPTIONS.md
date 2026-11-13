@@ -1,8 +1,8 @@
 # Pull request descriptions
 
-Copy the relevant block into the GitHub pull request form. Each feature PR is
-opened against `main`, reviewed by the other two members, and merged by one of
-them. The integration PR brings all three together and is tagged `P2`.
+Copy the relevant block into the GitHub pull request form. Each feature branch
+is opened against `main`; the other members merge it into `p2/integration`, and
+the integration PR brings all three together and is tagged `P2`.
 
 ---
 
@@ -47,7 +47,7 @@ Manual: register a user, add an address, log out, log in again and confirm the
 address is still listed; then try `PATCH /api/addresses/<someone-else-id>` and
 expect `403`.
 
-### Review checklist
+### Acceptance checklist
 
 - [ ] Passwords never leave the server as plain text or hashes.
 - [ ] Cookie is `httpOnly`, `SameSite=Lax`, and cleared on logout.
@@ -96,7 +96,7 @@ Manual: `/catalog?category=action-adventure&platform=PC`, then search `crown`,
 then open a product and follow the sibling-edition link. Check the grid at
 360 px: two columns, no horizontal scroll.
 
-### Review checklist
+### Acceptance checklist
 
 - [ ] Page size is clamped server-side to 24; `page` and `pageSize` are never
       trusted from the client.
@@ -149,7 +149,7 @@ Then send an event with a broken signature and confirm `400` and an unchanged
 order; send one with an unknown `orderId` and confirm the transaction rolled
 back.
 
-### Review checklist
+### Acceptance checklist
 
 - [ ] No route marks an order paid without a verified signature.
 - [ ] Replaying an event cannot move stock twice.
@@ -198,7 +198,7 @@ node scripts/verify-app.mjs
 Expected: 9 test files pass, the build passes, 19/19 live checks pass, and the
 seeded database reports 4 categories, 16 games, 32 editions, 64 images.
 
-### Review checklist
+### Acceptance checklist
 
 - [ ] All three branches merged without losing a feature.
 - [ ] Seed counts match the specification.
