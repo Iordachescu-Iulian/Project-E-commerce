@@ -1,30 +1,30 @@
 import Link from 'next/link';
 
+import { ProductGrid } from '@/components/catalog/ProductGrid';
 import { Container } from '@/components/ui/Container';
+import { MAX_PAGE_SIZE } from '@/lib/pagination';
+import { getCatalog, getCategories } from '@/server/queries/catalog';
 
-const features = [
-  {
-    title: 'Digital editions',
-    description: 'Instant delivery of game keys for PC and console.',
-  },
-  {
-    title: 'Physical editions',
-    description: 'Boxed copies shipped to your door by courier.',
-  },
-  {
-    title: 'One library',
-    description: 'Every edition of a game grouped on a single product page.',
-  },
-];
+export const dynamic = 'force-dynamic';
 
-export default function HomePage() {
+export default async function HomePage() {
+  const [categories, featured] = await Promise.all([
+    getCategories(),
+    getCatalog({ pageSize: 8 }),
+  ]);
+
+  const editionCount = categories.reduce(
+    (total, category) => total + category.productCount,
+    0,
+  );
+
   return (
     <>
       <section className="border-b border-white/10 bg-surface/40">
-        <Container className="grid gap-10 py-16 sm:py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+        <Container className="grid gap-10 py-14 sm:py-20 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-accent">
-              P2 prototype
+              Digital and physical editions
             </p>
             <h1 className="max-w-2xl text-4xl font-black leading-tight text-ink sm:text-5xl">
               Your next game, digital or on the shelf.
@@ -42,10 +42,10 @@ export default function HomePage() {
                 Browse the catalog
               </Link>
               <Link
-                href="/register"
+                href="/catalog#catalog-search"
                 className="inline-flex items-center justify-center rounded-md border border-white/15 px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-white/30 hover:bg-white/5"
               >
-                Create an account
+                Search games
               </Link>
             </div>
           </div>
@@ -57,42 +57,86 @@ export default function HomePage() {
             <dl className="mt-6 grid grid-cols-2 gap-6">
               <div>
                 <dt className="text-sm text-muted">Categories</dt>
-                <dd className="mt-1 text-3xl font-black text-accent">4</dd>
-              </div>
-              <div>
-                <dt className="text-sm text-muted">Games</dt>
-                <dd className="mt-1 text-3xl font-black text-accent">16</dd>
+                <dd className="mt-1 text-3xl font-black text-accent">
+                  {categories.length}
+                </dd>
               </div>
               <div>
                 <dt className="text-sm text-muted">Editions</dt>
-                <dd className="mt-1 text-3xl font-black text-accent">32</dd>
+                <dd className="mt-1 text-3xl font-black text-accent">
+                  {editionCount}
+                </dd>
               </div>
               <div>
-                <dt className="text-sm text-muted">Delivery</dt>
+                <dt className="text-sm text-muted">Per page</dt>
+                <dd className="mt-1 text-3xl font-black text-accent">
+                  {MAX_PAGE_SIZE}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm text-muted">Delivery options</dt>
                 <dd className="mt-1 text-3xl font-black text-accent">2</dd>
               </div>
             </dl>
             <p className="mt-6 border-t border-white/10 pt-4 text-xs leading-relaxed text-muted">
-              Catalog and search arrive with the catalog branch. Accounts and
-              addresses follow on the accounts branch.
+              Every game is grouped by edition, so the digital and physical
+              versions stay one click apart.
             </p>
           </div>
         </Container>
       </section>
 
       <section>
-        <Container className="py-14 sm:py-20">
-          <h2 className="text-2xl font-bold text-ink sm:text-3xl">Built around how games are sold</h2>
-          <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            {features.map((feature) => (
-              <article
-                key={feature.title}
-                className="rounded-xl border border-white/10 bg-surface p-6"
+        <Container className="py-12 sm:py-16">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+              Shop by category
+            </h2>
+            <Link
+              href="/catalog"
+              className="text-sm font-semibold text-accent transition-colors hover:text-accent/80"
+            >
+              View the catalog
+            </Link>
+          </div>
+
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {categories.map((category) => (
+              <Link
+                key={category.id}
+                href={`/categories/${category.slug}`}
+                className="group rounded-xl border border-white/10 bg-surface p-5 transition-colors hover:border-accent/40"
               >
-                <h3 className="text-lg font-semibold text-ink">{feature.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{feature.description}</p>
-              </article>
+                <p className="text-xs font-semibold uppercase tracking-wider text-accent">
+                  {category.productCount} editions
+                </p>
+                <h3 className="mt-2 text-lg font-semibold text-ink transition-colors group-hover:text-accent">
+                  {category.name}
+                </h3>
+                <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted">
+                  {category.description}
+                </p>
+              </Link>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-white/10 bg-surface/20">
+        <Container className="py-12 sm:py-16">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h2 className="text-2xl font-bold text-ink sm:text-3xl">
+              New in the store
+            </h2>
+            <Link
+              href="/catalog"
+              className="text-sm font-semibold text-accent transition-colors hover:text-accent/80"
+            >
+              View all {featured.total} editions
+            </Link>
+          </div>
+          <div className="mt-6">
+            <ProductGrid products={featured.items} />
           </div>
         </Container>
       </section>

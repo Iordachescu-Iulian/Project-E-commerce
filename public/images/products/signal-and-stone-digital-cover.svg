@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-labelledby="signal-and-stone-digital-cover-title signal-and-stone-digital-cover-desc" shape-rendering="geometricPrecision" font-family="Arial, Helvetica, sans-serif">
+  <title id="signal-and-stone-digital-cover-title">Signal &amp; Stone — Digital Edition</title>
+  <desc id="signal-and-stone-digital-cover-desc">Cover art for Signal &amp; Stone, Digital Edition, on Nintendo Switch.</desc>
+  <defs>
+    <linearGradient id="signal-and-stone-digital-cover-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1E19"/>
+      <stop offset="52%" stop-color="#11362D"/>
+      <stop offset="100%" stop-color="#185951"/>
+    </linearGradient>
+    <radialGradient id="signal-and-stone-digital-cover-glow" cx="0.78" cy="0.2" r="0.72">
+      <stop offset="0%" stop-color="#DDB640" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#DDB640" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="signal-and-stone-digital-cover-mesh" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M28 1 L54 15 L54 33 L28 47 L2 33 L2 15 Z" fill="none" stroke="#F4F2EC" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="signal-and-stone-digital-cover-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="600" height="800" fill="url(#signal-and-stone-digital-cover-bg)"/>
+  <rect width="600" height="800" fill="url(#signal-and-stone-digital-cover-glow)"/>
+  <rect width="600" height="800" fill="url(#signal-and-stone-digital-cover-mesh)"/>
+  <rect width="8" height="800" fill="#5FE0A4"/>
+  <polygon points="477.4,483.4 585.2,568.0 565.7,703.6 438.6,754.6 330.8,670.0 350.3,534.4" fill="#185951" fill-opacity="0.24" stroke="#DDB640" stroke-opacity="0.55" stroke-width="2"/>
+    <polygon points="477.2,527.8 546.6,590.1 527.3,681.2 438.8,710.2 369.4,647.9 388.7,556.8" fill="#0B1E19" fill-opacity="0.62" stroke="#F4F2EC" stroke-opacity="0.14" stroke-width="1.5"/>
+    <polygon points="481.1,575.4 507.3,617.2 484.2,660.8 434.9,662.6 408.7,620.8 431.8,577.2" fill="#DDB640" fill-opacity="0.16" stroke="#DDB640" stroke-opacity="0.7" stroke-width="2"/>
+  <polygon points="635.6,720.8 645.5,735.0 638.1,750.7 620.9,752.1 611.0,738.0 618.3,722.3" fill="none" stroke="#DDB640" stroke-opacity="0.24" stroke-width="1.5"/>
+    <polygon points="665.7,568.3 679.0,584.0 672.0,603.4 651.8,607.0 638.5,591.3 645.5,572.0" fill="none" stroke="#DDB640" stroke-opacity="0.26" stroke-width="1.5"/>
+    <polygon points="337.2,730.7 356.0,747.9 350.6,772.8 326.2,780.5 307.4,763.3 312.9,738.4" fill="none" stroke="#DDB640" stroke-opacity="0.39" stroke-width="1.5"/>
+    <polygon points="682.6,700.4 691.8,722.2 677.6,741.1 654.1,738.2 644.8,716.5 659.1,697.6" fill="none" stroke="#DDB640" stroke-opacity="0.37" stroke-width="1.5"/>
+    <polygon points="310.3,709.7 327.5,720.4 326.8,740.6 308.9,750.2 291.7,739.4 292.4,719.2" fill="none" stroke="#DDB640" stroke-opacity="0.30" stroke-width="1.5"/>
+  <text x="56" y="64" font-size="18" font-weight="900" letter-spacing="6" fill="#F4F2EC">HEXORA</text>
+  <text x="56" y="100" font-size="13" font-weight="700" letter-spacing="3" fill="#B8B4CC">INDIE &amp; STRATEGY</text>
+  <rect x="56" y="122" width="62" height="3" rx="1.5" fill="#5FE0A4"/>
+  <rect x="416" y="38" width="128" height="34" rx="17" fill="#14121F" fill-opacity="0.55" stroke="#5FE0A4" stroke-opacity="0.65"/>
+    <text x="480" y="60" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="2.4" fill="#5FE0A4">DIGITAL</text>
+  <text filter="url(#signal-and-stone-digital-cover-shadow)" font-size="72" font-weight="900" text-anchor="middle" letter-spacing="-1" fill="#F4F2EC"><tspan x="300" y="343.8">Signal &amp;</tspan><tspan x="300" y="420.2">Stone</tspan></text>
+  <rect x="56" y="662" width="488" height="1" fill="#F4F2EC" fill-opacity="0.14"/>
+  <rect x="56" y="690" width="173" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.07" stroke="#F4F2EC" stroke-opacity="0.22"/>
+    <text x="78" y="715" font-size="14" font-weight="700" letter-spacing="0.6" fill="#F4F2EC">Nintendo Switch</text>
+  <text x="56" y="768" font-size="16" font-weight="800" letter-spacing="3.6" fill="#5FE0A4">DIGITAL EDITION</text>
+  <text x="544" y="768" text-anchor="end" font-size="11" font-weight="700" letter-spacing="2.4" fill="#B8B4CC">INSTANT DELIVERY</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800" role="img" aria-labelledby="ashen-crown-physical-cover-title ashen-crown-physical-cover-desc" shape-rendering="geometricPrecision" font-family="Arial, Helvetica, sans-serif">
+  <title id="ashen-crown-physical-cover-title">Ashen Crown — Physical Edition</title>
+  <desc id="ashen-crown-physical-cover-desc">Cover art for Ashen Crown, Physical Edition, on PC.</desc>
+  <defs>
+    <linearGradient id="ashen-crown-physical-cover-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1E100B"/>
+      <stop offset="52%" stop-color="#362211"/>
+      <stop offset="100%" stop-color="#6D511D"/>
+    </linearGradient>
+    <radialGradient id="ashen-crown-physical-cover-glow" cx="0.78" cy="0.2" r="0.72">
+      <stop offset="0%" stop-color="#E2B25A" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#E2B25A" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="ashen-crown-physical-cover-mesh" width="56" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(-12)">
+      <path d="M28 1 L54 15 L54 33 L28 47 L2 33 L2 15 Z" fill="none" stroke="#F4F2EC" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <filter id="ashen-crown-physical-cover-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="600" height="800" fill="url(#ashen-crown-physical-cover-bg)"/>
+  <rect width="600" height="800" fill="url(#ashen-crown-physical-cover-glow)"/>
+  <rect width="600" height="800" fill="url(#ashen-crown-physical-cover-mesh)"/>
+  <rect width="8" height="800" fill="#E2B25A"/>
+  <polygon points="544.3,509.9 614.8,617.9 556.5,733.0 427.7,740.1 357.2,632.1 415.5,517.0" fill="#6D511D" fill-opacity="0.24" stroke="#E2B25A" stroke-opacity="0.55" stroke-width="2"/>
+    <polygon points="517.3,543.1 572.6,611.2 541.3,693.1 454.7,706.9 399.4,638.8 430.7,556.9" fill="#1E100B" fill-opacity="0.62" stroke="#F4F2EC" stroke-opacity="0.14" stroke-width="1.5"/>
+    <polygon points="497.9,580.1 530.8,612.9 518.9,657.7 474.1,669.9 441.2,637.1 453.1,592.3" fill="#E2B25A" fill-opacity="0.16" stroke="#E2B25A" stroke-opacity="0.7" stroke-width="2"/>
+  <polygon points="571.7,794.7 583.9,813.2 573.9,833.1 551.7,834.3 539.5,815.8 549.5,795.9" fill="none" stroke="#E2B25A" stroke-opacity="0.51" stroke-width="1.5"/>
+    <polygon points="399.4,773.2 412.0,793.8 400.4,815.0 376.3,815.6 363.7,795.0 375.3,773.8" fill="none" stroke="#E2B25A" stroke-opacity="0.38" stroke-width="1.5"/>
+    <polygon points="390.1,409.2 395.7,426.1 383.9,439.4 366.5,435.8 360.9,419.0 372.7,405.7" fill="none" stroke="#E2B25A" stroke-opacity="0.37" stroke-width="1.5"/>
+    <polygon points="650.7,564.1 672.7,577.2 672.3,602.8 649.9,615.3 627.9,602.1 628.4,576.5" fill="none" stroke="#E2B25A" stroke-opacity="0.22" stroke-width="1.5"/>
+    <polygon points="364.7,498.7 369.2,512.5 359.6,523.2 345.4,520.3 340.9,506.5 350.5,495.8" fill="none" stroke="#E2B25A" stroke-opacity="0.49" stroke-width="1.5"/>
+  <text x="56" y="64" font-size="18" font-weight="900" letter-spacing="6" fill="#F4F2EC">HEXORA</text>
+  <text x="56" y="100" font-size="13" font-weight="700" letter-spacing="3" fill="#B8B4CC">ACTION &amp; ADVENTURE</text>
+  <rect x="56" y="122" width="62" height="3" rx="1.5" fill="#E2B25A"/>
+  <rect x="416" y="38" width="128" height="34" rx="17" fill="#14121F" fill-opacity="0.55" stroke="#E2B25A" stroke-opacity="0.65"/>
+    <text x="480" y="60" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="2.4" fill="#E2B25A">PHYSICAL</text>
+  <text filter="url(#ashen-crown-physical-cover-shadow)" font-size="72" font-weight="900" text-anchor="middle" letter-spacing="-1" fill="#F4F2EC"><tspan x="300" y="382.0">Ashen Crown</tspan></text>
+  <rect x="56" y="662" width="488" height="1" fill="#F4F2EC" fill-opacity="0.14"/>
+  <rect x="56" y="690" width="120" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.07" stroke="#F4F2EC" stroke-opacity="0.22"/>
+    <text x="78" y="715" font-size="14" font-weight="700" letter-spacing="0.6" fill="#F4F2EC">PC</text>
+  <text x="56" y="768" font-size="16" font-weight="800" letter-spacing="3.6" fill="#E2B25A">PHYSICAL EDITION</text>
+  <text x="544" y="768" text-anchor="end" font-size="11" font-weight="700" letter-spacing="2.4" fill="#B8B4CC">BOXED COPY</text>
+</svg>
