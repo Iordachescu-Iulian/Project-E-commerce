@@ -7,6 +7,8 @@ import { getSessionUser } from '@/lib/auth';
 
 import './globals.css';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: {
     default: 'Hexora — Video games for PC and console',
