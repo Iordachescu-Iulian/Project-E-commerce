@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hexora P2 — Wireframes</title>
+<style>
+  :root {
+    --bg:#14121F; --surface:#1E1B2E; --surface2:#2A2834; --ink:#F4F2EC;
+    --muted:#B8B4CC; --line:#3A3650; --accent:#5FE0A4; --secondary:#5B45E0;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#0d0b14; color:var(--ink); font-family:Arial, Helvetica, sans-serif; }
+  .wireframe { width:1240px; height:820px; padding:34px 40px 30px; background:var(--bg); margin:0 auto 40px; display:flex; flex-direction:column; }
+  .wf-head { display:flex; align-items:baseline; justify-content:space-between; border-bottom:1px solid var(--line); padding-bottom:14px; margin-bottom:20px; }
+  .wf-head h2 { margin:0; font-size:22px; letter-spacing:.14em; font-weight:800; }
+  .wf-head span { color:var(--accent); font-size:12px; letter-spacing:.22em; font-weight:700; }
+  .browser { flex:1; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--surface); display:flex; flex-direction:column; }
+  .chrome { height:34px; background:var(--surface2); display:flex; align-items:center; gap:7px; padding:0 14px; border-bottom:1px solid var(--line); }
+  .dot { width:8px; height:8px; border-radius:50%; background:#55516B; }
+  .url { margin-left:12px; flex:1; max-width:420px; height:18px; border-radius:9px; background:#14121F; border:1px solid var(--line); font-size:10px; color:var(--muted); display:flex; align-items:center; padding:0 10px; }
+  .page { flex:1; padding:20px 24px 22px; display:flex; flex-direction:column; gap:16px; }
+  .nav { display:flex; align-items:center; justify-content:space-between; }
+  .brand { font-weight:900; letter-spacing:.28em; font-size:15px; }
+  .nav-links { display:flex; gap:18px; font-size:11px; color:var(--muted); }
+  .nav-cta { padding:7px 13px; border-radius:6px; background:var(--accent); color:#14121F; font-size:11px; font-weight:700; }
+  .searchrow { display:flex; gap:10px; }
+  .search { flex:1; height:38px; border:1px solid var(--line); border-radius:8px; background:var(--surface2); color:var(--muted); font-size:11px; display:flex; align-items:center; padding:0 12px; }
+  .chip-row { display:flex; gap:8px; }
+  .chip { padding:6px 12px; border-radius:999px; border:1px solid var(--line); font-size:10px; color:var(--muted); }
+  .chip.on { border-color:var(--accent); color:var(--accent); background:rgba(95,224,164,.08); }
+  .grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; flex:1; }
+  .card { border:1px solid var(--line); border-radius:9px; background:var(--surface2); display:flex; flex-direction:column; overflow:hidden; }
+  .cover { height:120px; background:linear-gradient(135deg,#242038,#1a1728); border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:#55516B; font-size:11px; letter-spacing:.16em; }
+  .card-body { padding:10px 11px; display:flex; flex-direction:column; gap:7px; }
+  .t { font-size:11px; font-weight:700; }
+  .small { font-size:10px; color:var(--muted); }
+  .price { font-size:12px; font-weight:800; color:var(--accent); }
+  .pill { align-self:flex-start; padding:3px 8px; border-radius:999px; font-size:9px; border:1px solid rgba(95,224,164,.4); color:var(--accent); }
+  .pager { display:flex; gap:7px; justify-content:center; align-items:center; font-size:10px; color:var(--muted); }
+  .pager b { width:26px; height:26px; border-radius:6px; background:var(--accent); color:#14121F; display:flex; align-items:center; justify-content:center; }
+  .pager i { width:26px; height:26px; border-radius:6px; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; font-style:normal; }
+  .two { display:grid; grid-template-columns:1.05fr .95fr; gap:22px; flex:1; }
+  .gallery { display:flex; flex-direction:column; gap:10px; }
+  .hero-img { flex:1; border:1px solid var(--line); border-radius:10px; background:linear-gradient(135deg,#272139,#1a1728); display:flex; align-items:center; justify-content:center; color:#55516B; font-size:12px; letter-spacing:.18em; }
+  .thumbs { display:flex; gap:8px; }
+  .thumb { width:64px; height:44px; border-radius:6px; border:1px solid var(--line); background:#242038; }
+  .thumb.on { border-color:var(--accent); }
+  .info { display:flex; flex-direction:column; gap:10px; }
+  .info h3 { margin:0; font-size:24px; line-height:1.15; }
+  .meta { font-size:11px; color:var(--muted); }
+  .bigprice { font-size:26px; font-weight:900; color:var(--accent); }
+  .box { border:1px solid var(--line); border-radius:8px; padding:11px; background:var(--surface2); display:flex; flex-direction:column; gap:7px; }
+  .btn { height:38px; border-radius:7px; background:var(--accent); color:#14121F; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; }
+  .btn.ghost { background:transparent; border:1px solid var(--line); color:var(--ink); }
+  .row { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .hr { height:1px; background:var(--line); margin:4px 0; }
+  .table { width:100%; border:1px solid var(--line); border-radius:9px; overflow:hidden; }
+  .tr { display:grid; grid-template-columns:2.4fr .8fr 1.1fr .9fr .5fr; gap:0; border-bottom:1px solid var(--line); align-items:center; font-size:10.5px; }
+  .tr:last-child { border-bottom:0; }
+  .th { background:var(--surface2); font-size:9px; letter-spacing:.12em; color:var(--muted); text-transform:uppercase; }
+  .td { padding:10px 12px; }
+  .thumb-sm { width:30px; height:30px; border-radius:4px; background:#2b2740; border:1px solid var(--line); display:inline-block; vertical-align:middle; margin-right:8px; }
+  .qty { display:inline-flex; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+  .qty span { padding:4px 8px; font-size:10px; }
+  .qty .num { background:var(--surface2); }
+  .side { width:300px; display:flex; flex-direction:column; gap:10px; }
+  .steps { display:flex; gap:0; border:1px solid var(--line); border-radius:8px; overflow:hidden; }
+  .step { flex:1; padding:10px 12px; font-size:10.5px; color:var(--muted); border-right:1px solid var(--line); display:flex; gap:8px; align-items:center; }
+  .step:last-child { border-right:0; }
+  .step.on { background:rgba(95,224,164,.09); color:var(--ink); }
+  .step b { width:18px; height:18px; border-radius:50%; background:var(--surface2); display:flex; align-items:center; justify-content:center; font-size:9px; }
+  .step.on b { background:var(--accent); color:#14121F; }
+  .field { height:32px; border:1px solid var(--line); border-radius:6px; background:var(--surface2); }
+  .field.small { height:26px; }
+  .label { font-size:9px; color:var(--muted); letter-spacing:.08em; text-transform:uppercase; margin-bottom:4px; }
+  .radio { display:flex; align-items:center; gap:9px; border:1px solid var(--line); border-radius:7px; padding:10px; font-size:10.5px; }
+  .radio.on { border-color:var(--accent); background:rgba(95,224,164,.06); }
+  .radio i { width:12px; height:12px; border-radius:50%; border:1px solid var(--muted); display:block; }
+  .radio.on i { border:4px solid var(--accent); }
+  .admin { display:grid; grid-template-columns:200px 1fr; gap:16px; flex:1; }
+  .sidebar { border:1px solid var(--line); border-radius:9px; background:var(--surface2); padding:14px; display:flex; flex-direction:column; gap:8px; }
+  .side-item { font-size:11px; color:var(--muted); padding:7px 9px; border-radius:6px; }
+  .side-item.on { background:rgba(95,224,164,.1); color:var(--accent); font-weight:700; }
+  .kpis { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+  .kpi { border:1px solid var(--line); border-radius:8px; background:var(--surface2); padding:12px; display:flex; flex-direction:column; gap:5px; }
+  .kpi b { font-size:22px; color:var(--accent); }
+  .tag { padding:3px 7px; border-radius:999px; font-size:9px; font-weight:700; }
+  .tag.paid { background:rgba(95,224,164,.15); color:var(--accent); }
+  .tag.new { background:rgba(91,69,224,.2); color:#b9adff; }
+  .tag.ship { background:rgba(255,196,87,.15); color:#ffc457; }
+  .caption { margin-top:12px; font-size:11px; color:var(--muted); display:flex; justify-content:space-between; }
+</style>
+</head>
+<body>
+
+<!-- 1. CATALOG -->
+<section class="wireframe" id="wf-catalog">
+  <div class="wf-head"><h2>CATALOG</h2><span>WIREFRAME · A1 · 1440 PX</span></div>
+  <div class="browser">
+    <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><div class="url">hexora.local/catalog</div></div>
+    <div class="page">
+      <div class="nav">
+        <div class="brand">HEXORA</div>
+        <div class="nav-links"><span>Catalog</span><span>Log in</span><span class="nav-cta">Register</span></div>
+      </div>
+      <div class="searchrow"><div class="search">Search games by name…</div><div class="chip">Search</div></div>
+      <div class="chip-row"><div class="chip on">All games</div><div class="chip">Action &amp; Adventure</div><div class="chip">RPG</div><div class="chip">Shooters</div><div class="chip">Indie &amp; Strategy</div></div>
+      <div class="grid4">
+        <div class="card"><div class="cover">COVER ART</div><div class="card-body"><div class="t">Ashen Crown — Digital</div><div class="small">PC · Action &amp; Adventure</div><div class="row"><span class="price">129,99 lei</span><span class="pill">In stock</span></div></div></div>
+        <div class="card"><div class="cover">COVER ART</div><div class="card-body"><div class="t">Ashen Crown — Physical</div><div class="small">PC · Boxed edition</div><div class="row"><span class="price">189,99 lei</span><span class="pill">In stock</span></div></div></div>
+        <div class="card"><div class="cover">COVER ART</div><div class="card-body"><div class="t">Neon Drifter — Digital</div><div class="small">PS5 · Action &amp; Adventure</div><div class="row"><span class="price">99,99 lei</span><span class="pill">In stock</span></div></div></div>
+        <div class="card"><div class="cover">COVER ART</div><div class="card-body"><div class="t">Hollow Tide — Physical</div><div class="small">PC · Boxed edition</div><div class="row"><span class="price">179,99 lei</span><span class="pill" style="border-color:#ff8080;color:#ff9d9d">Out of stock</span></div></div></div>
+        <div class="card"><div class="cover">COVER ART</div><div class="card-body"><div class="t">Emberwake — Digital</div><div class="small">PC · RPG</div><div class="row"><span class="price">119,99 lei</span><span class="pill">In stock</span></div></div></div>
+        <div class="card"><div class="cover">COVER ART</div><div class="card-body"><div class="t">Moonsong Saga — Digital</div><div class="small">Switch · RPG</div><div class="row"><span class="price">109,99 lei</span><span class="pill">In stock</span></div></div></div>
+        <div class="card"><div class="cover">COVER ART</div><div class="card-body"><div class="t">Skybound Legion — Digital</div><div class="small">Xbox · Shooters</div><div class="row"><span class="price">139,99 lei</span><span class="pill">In stock</span></div></div></div>
+        <div class="card"><div class="cover">COVER ART</div><div class="card-body"><div class="t">The Last Runekeeper — Physical</div><div class="small">PC · Boxed edition</div><div class="row"><span class="price">199,99 lei</span><span class="pill">In stock</span></div></div></div>
+      </div>
+      <div class="pager"><i>Prev</i><b>1</b><i>2</i><i>3</i><i>4</i><i>Next</i></div>
+    </div>
+  </div>
+  <div class="caption"><span>Search and category filters preserve state in the query string.</span><span>A1 · 24 products per page</span></div>
+</section>
+
+<!-- 2. PRODUCT -->
+<section class="wireframe" id="wf-product">
+  <div class="wf-head"><h2>PRODUCT PAGE</h2><span>WIREFRAME · A1 · 1440 PX</span></div>
+  <div class="browser">
+    <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><div class="url">hexora.local/products/ashen-crown-digital</div></div>
+    <div class="page">
+      <div class="nav"><div class="brand">HEXORA</div><div class="nav-links"><span>Catalog</span><span>Account</span><span class="nav-cta">Sign out</span></div></div>
+      <div class="small">Catalog / Action &amp; Adventure / Ashen Crown</div>
+      <div class="two">
+        <div class="gallery">
+          <div class="hero-img">COVER ART — 1 : 1</div>
+          <div class="thumbs"><div class="thumb on"></div><div class="thumb"></div><div class="thumb"></div></div>
+        </div>
+        <div class="info">
+          <span class="small" style="color:var(--accent);letter-spacing:.18em">DIGITAL EDITION</span>
+          <h3>Ashen Crown — Digital Edition</h3>
+          <div class="meta">PC · Action &amp; Adventure · Instant key delivery</div>
+          <div class="bigprice">129,99 lei</div>
+          <div class="box">
+            <div class="row"><span class="small">Availability</span><span class="pill">In stock · 42</span></div>
+            <div class="hr"></div>
+            <div class="label">Edition</div>
+            <div class="row"><span class="chip on">Digital · 129,99 lei</span><span class="chip">Physical · 189,99 lei</span></div>
+            <div class="hr"></div>
+            <div class="label">Platform</div>
+            <div class="small">PC (Steam key)</div>
+          </div>
+          <div class="btn">Add to cart — available in week 8</div>
+          <div class="btn ghost">See the physical edition</div>
+          <div class="box">
+            <div class="t">About this game</div>
+            <div class="small">A short description of the world, the combat and what the edition includes. The same copy is reused for both editions.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="caption"><span>Gallery, price, stock, sibling edition and a clearly disabled cart CTA.</span><span>A1 · responsive at 360 px</span></div>
+</section>
+
+<!-- 3. CART -->
+<section class="wireframe" id="wf-cart">
+  <div class="wf-head"><h2>CART</h2><span>WIREFRAME · A3 · 1440 PX</span></div>
+  <div class="browser">
+    <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><div class="url">hexora.local/cart</div></div>
+    <div class="page">
+      <div class="nav"><div class="brand">HEXORA</div><div class="nav-links"><span>Catalog</span><span>Account</span><span>Cart (3)</span></div></div>
+      <div class="row"><h3 style="margin:0;font-size:20px">Your cart</h3><span class="small">3 items · stock checked on every change</span></div>
+      <div style="display:flex;gap:20px;flex:1">
+        <div style="flex:1;display:flex;flex-direction:column;gap:12px">
+          <div class="table">
+            <div class="tr th"><div class="td">Product</div><div class="td">Price</div><div class="td">Quantity</div><div class="td">Line total</div><div class="td"></div></div>
+            <div class="tr"><div class="td"><span class="thumb-sm"></span>Ashen Crown — Digital</div><div class="td">129,99</div><div class="td"><span class="qty"><span>−</span><span class="num">1</span><span>+</span></span></div><div class="td">129,99</div><div class="td small">Remove</div></div>
+            <div class="tr"><div class="td"><span class="thumb-sm"></span>Emberwake — Digital</div><div class="td">119,99</div><div class="td"><span class="qty"><span>−</span><span class="num">2</span><span>+</span></span></div><div class="td">239,98</div><div class="td small">Remove</div></div>
+            <div class="tr"><div class="td"><span class="thumb-sm"></span>Ashen Crown — Physical</div><div class="td">189,99</div><div class="td"><span class="qty"><span>−</span><span class="num">1</span><span>+</span></span></div><div class="td">189,99</div><div class="td small">Remove</div></div>
+          </div>
+          <div class="small">A quantity above available stock is rejected with a visible message.</div>
+          <div class="btn ghost" style="width:190px">Continue shopping</div>
+        </div>
+        <div class="side">
+          <div class="box" style="flex:1">
+            <div class="t">Order summary</div>
+            <div class="row small"><span>Subtotal</span><span>559,96 lei</span></div>
+            <div class="row small"><span>Delivery</span><span>Calculated at checkout</span></div>
+            <div class="hr"></div>
+            <div class="row"><b>Total</b><b class="price">559,96 lei</b></div>
+            <div class="btn">Proceed to checkout</div>
+            <div class="small">Totals are always recalculated on the server.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="caption"><span>Server-side totals, stock-aware quantity steppers and persistent cart.</span><span>A3 · weeks 8–9</span></div>
+</section>
+
+<!-- 4. CHECKOUT -->
+<section class="wireframe" id="wf-checkout">
+  <div class="wf-head"><h2>CHECKOUT</h2><span>WIREFRAME · A5 / A6 · 1440 PX</span></div>
+  <div class="browser">
+    <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><div class="url">hexora.local/checkout</div></div>
+    <div class="page">
+      <div class="nav"><div class="brand">HEXORA</div><div class="nav-links"><span>Secure checkout</span><span>Test mode</span></div></div>
+      <div class="steps">
+        <div class="step on"><b>1</b>Address</div>
+        <div class="step on"><b>2</b>Delivery</div>
+        <div class="step"><b>3</b>Payment</div>
+        <div class="step"><b>4</b>Confirmation</div>
+      </div>
+      <div style="display:flex;gap:20px;flex:1">
+        <div style="flex:1;display:flex;flex-direction:column;gap:14px">
+          <div class="box">
+            <div class="t">Delivery address</div>
+            <div class="row"><div style="flex:1"><div class="label">Recipient</div><div class="field"></div></div><div style="flex:1"><div class="label">Phone</div><div class="field"></div></div></div>
+            <div><div class="label">Street</div><div class="field"></div></div>
+            <div class="row"><div style="flex:1"><div class="label">City</div><div class="field"></div></div><div style="flex:1"><div class="label">Postal code</div><div class="field"></div></div></div>
+          </div>
+          <div class="box">
+            <div class="t">Delivery method</div>
+            <div class="radio on"><i></i><div style="flex:1"><b>Digital delivery</b><div class="small">Key in your account after payment</div></div><b>0,00 lei</b></div>
+            <div class="radio"><i></i><div style="flex:1"><b>Courier — 24–48 h</b><div class="small">Boxed copies, tracked shipment</div></div><b>19,99 lei</b></div>
+          </div>
+          <div class="box">
+            <div class="t">Payment</div>
+            <div class="small">Card details are collected by Stripe Elements. Hexora never sees the card number.</div>
+            <div class="field"></div>
+            <div class="row"><div class="field" style="flex:1"></div><div class="field" style="flex:1"></div></div>
+          </div>
+        </div>
+        <div class="side">
+          <div class="box" style="flex:1">
+            <div class="t">Order summary</div>
+            <div class="small">Ashen Crown — Digital × 1</div>
+            <div class="small">Emberwake — Digital × 2</div>
+            <div class="hr"></div>
+            <div class="row small"><span>Subtotal</span><span>369,97 lei</span></div>
+            <div class="row small"><span>Delivery</span><span>0,00 lei</span></div>
+            <div class="row"><b>Total</b><b class="price">369,97 lei</b></div>
+            <div class="btn">Pay with Stripe</div>
+            <div class="small">The order is marked Paid only after the signed webhook arrives.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="caption"><span>Address → delivery → payment → confirmation, with a server-created order.</span><span>A5 · A6 · weeks 8–9</span></div>
+</section>
+
+<!-- 5. ADMIN -->
+<section class="wireframe" id="wf-admin">
+  <div class="wf-head"><h2>ADMIN PANEL</h2><span>WIREFRAME · A9 · 1440 PX</span></div>
+  <div class="browser">
+    <div class="chrome"><i class="dot"></i><i class="dot"></i><i class="dot"></i><div class="url">hexora.local/admin/orders</div></div>
+    <div class="page">
+      <div class="nav"><div class="brand">HEXORA ADMIN</div><div class="nav-links"><span>admin@hexora.test</span><span class="nav-cta">Sign out</span></div></div>
+      <div class="admin">
+        <div class="sidebar">
+          <div class="side-item">Dashboard</div>
+          <div class="side-item">Products</div>
+          <div class="side-item">Categories</div>
+          <div class="side-item on">Orders</div>
+          <div class="side-item">Discounts</div>
+          <div class="side-item">Settings</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <div class="kpis">
+            <div class="kpi"><span class="small">Revenue · 30 days</span><b>12.480 lei</b><span class="small">+8% vs previous</span></div>
+            <div class="kpi"><span class="small">Orders</span><b>86</b><span class="small">4 waiting for payment</span></div>
+            <div class="kpi"><span class="small">Average order</span><b>145 lei</b><span class="small">B4 dashboard</span></div>
+          </div>
+          <div class="row"><div class="chip-row"><div class="chip on">All</div><div class="chip">New</div><div class="chip">Paid</div><div class="chip">Shipped</div><div class="chip">Delivered</div><div class="chip">Cancelled</div></div><div class="chip">Filter by status</div></div>
+          <div class="table">
+            <div class="tr th" style="grid-template-columns:1.1fr 1.3fr 1fr .8fr .9fr .8fr"><div class="td">Order</div><div class="td">Customer</div><div class="td">Date</div><div class="td">Total</div><div class="td">Payment</div><div class="td">Status</div></div>
+            <div class="tr" style="grid-template-columns:1.1fr 1.3fr 1fr .8fr .9fr .8fr"><div class="td">HX-1042</div><div class="td">Demo Customer</div><div class="td">12 Nov</div><div class="td">369,97</div><div class="td"><span class="tag paid">PAID</span></div><div class="td"><span class="tag new">NEW</span></div></div>
+            <div class="tr" style="grid-template-columns:1.1fr 1.3fr 1fr .8fr .9fr .8fr"><div class="td">HX-1041</div><div class="td">Alex Popescu</div><div class="td">12 Nov</div><div class="td">189,99</div><div class="td"><span class="tag paid">PAID</span></div><div class="td"><span class="tag ship">SHIPPED</span></div></div>
+            <div class="tr" style="grid-template-columns:1.1fr 1.3fr 1fr .8fr .9fr .8fr"><div class="td">HX-1040</div><div class="td">Maria Ionescu</div><div class="td">11 Nov</div><div class="td">239,98</div><div class="td"><span class="tag new">UNPAID</span></div><div class="td"><span class="tag new">NEW</span></div></div>
+            <div class="tr" style="grid-template-columns:1.1fr 1.3fr 1fr .8fr .9fr .8fr"><div class="td">HX-1039</div><div class="td">Demo Customer</div><div class="td">10 Nov</div><div class="td">129,99</div><div class="td"><span class="tag paid">PAID</span></div><div class="td"><span class="tag paid">DELIVERED</span></div></div>
+          </div>
+          <div class="small">Status transitions: New → Paid → Shipped → Delivered, or Cancelled. Every change is written to OrderStatusHistory.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="caption"><span>Admin-only routes, status filters and audited transitions.</span><span>A9 · weeks 10–11</span></div>
+</section>
+
+</body>
+</html>
